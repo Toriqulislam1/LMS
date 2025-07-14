@@ -329,7 +329,7 @@
       </div>
       {{-- @dd("asdf") --}}
       <!-- end .rev_slider_wrapper -->
-      {{-- <script>
+      <script>
         $(document).ready(function(e) {
           $(".rev_slider").revolution({
             sliderType:"standard",
@@ -384,7 +384,7 @@
                 h_offset:0,
                 v_offset:30,
                 space:5,
-                tmp:'<span class="tp-bullet-img-wrap">  <span class="tp-bullet-image"></span></span><span class="tp-bullet-title">{{title}}</span>'
+                tmp:'<span class="tp-bullet-img-wrap">  <span class="tp-bullet-image"></span></span><span class="tp-bullet-title">Toriqul</span>'
               }
             },
             responsiveLevels: [1240, 1024, 778],
@@ -421,7 +421,7 @@
             }
           });
         });
-      </script> --}}
+      </script>
       <!-- Slider Revolution Ends -->
 
     </section>
