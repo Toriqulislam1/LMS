@@ -38,7 +38,7 @@
       >
         <!-- Form -->
         <div class="flex flex-col flex-1 w-full lg:w-1/2">
-          <div class="w-full max-w-md pt-10 mx-auto">
+          {{-- <div class="w-full max-w-md pt-10 mx-auto">
             <a
               href="index.html"
               class="inline-flex items-center text-sm text-gray-500 transition-colors hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300"
@@ -61,7 +61,7 @@
               </svg>
               Back to dashboard
             </a>
-          </div>
+          </div> --}}
           <div
             class="flex flex-col justify-center flex-1 w-full max-w-md mx-auto"
           >
@@ -77,7 +77,7 @@
                 </p>
               </div>
               <div>
-                <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-5">
+                {{-- <div class="grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-5">
                   <button
                     class="inline-flex items-center justify-center gap-3 py-3 text-sm font-normal text-gray-700 transition-colors bg-gray-100 rounded-lg px-7 hover:bg-gray-200 hover:text-gray-800 dark:bg-white/5 dark:text-white/90 dark:hover:bg-white/10"
                   >
@@ -125,7 +125,7 @@
 
                     Sign in with X
                   </button>
-                </div>
+                </div> --}}
                 <div class="relative py-3 sm:py-5">
                   <div class="absolute inset-0 flex items-center">
                     <div
@@ -139,7 +139,8 @@
                     >
                   </div>
                 </div>
-                <form>
+                <form action="{{route('provider-login')}}" method="POST" >
+                    @csrf
                   <div class="space-y-5">
                     <!-- Email -->
                     <div>
@@ -165,12 +166,13 @@
                       </label>
                       <div x-data="{ showPassword: false }" class="relative">
                         <input
-                          :type="showPassword ? 'text' : 'password'"
+                          type="password"
+                          name="password"
                           placeholder="Enter your password"
                           class="dark:bg-dark-900 h-11 w-full rounded-lg border border-gray-300 bg-transparent py-2.5 pl-4 pr-11 text-sm text-gray-800 shadow-theme-xs placeholder:text-gray-400 focus:border-brand-300 focus:outline-hidden focus:ring-3 focus:ring-brand-500/10 dark:border-gray-700 dark:bg-gray-900 dark:text-white/90 dark:placeholder:text-white/30 dark:focus:border-brand-800"
                         />
                         <span
-                          @click="showPassword = !showPassword"
+
                           class="absolute z-30 text-gray-500 -translate-y-1/2 cursor-pointer right-4 top-1/2 dark:text-gray-400"
                         >
                           <svg
@@ -248,11 +250,11 @@
                           Keep me logged in
                         </label>
                       </div>
-                      <a
+                      {{-- <a
                         href="/reset-password.html"
                         class="text-sm text-brand-500 hover:text-brand-600 dark:text-brand-400"
                         >Forgot password?</a
-                      >
+                      > --}}
                     </div>
                     <!-- Button -->
                     <div>
@@ -264,7 +266,7 @@
                     </div>
                   </div>
                 </form>
-                <div class="mt-5">
+                {{-- <div class="mt-5">
                   <p
                     class="text-sm font-normal text-center text-gray-700 dark:text-gray-400 sm:text-start"
                   >
@@ -275,7 +277,7 @@
                       >Sign Up</a
                     >
                   </p>
-                </div>
+                </div> --}}
               </div>
             </div>
           </div>
@@ -300,7 +302,7 @@
                 <img src="src/images/logo/auth-logo.svg" alt="Logo" />
               </a>
               <p class="text-center text-gray-400 dark:text-white/60">
-                Free and Open-Source Tailwind CSS Admin Dashboard Template
+                Admin Dashboard
               </p>
             </div>
           </div>
