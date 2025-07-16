@@ -10,7 +10,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
     <title>
-        Provider
+        Provider Dashboard
     </title>
      <script src="https://cdn.tailwindcss.com"></script>
        <link rel="icon" href="favicon.ico"><link href="{{asset('style.css')}}" rel="stylesheet">
