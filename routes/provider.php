@@ -4,4 +4,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::prefix('provider')->group(function () {
     require base_path('app/Modules/Provider/auth/routes.php');
+    require base_path('app/Modules/Provider/course/routes.php');
+
 });
