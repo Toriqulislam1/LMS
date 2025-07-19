@@ -1,11 +1,13 @@
 <?php
-namespace App\Modules\provider\auth\Repositories;
+namespace App\Modules\provider\course\Repositories;
+
+use Illuminate\Support\Collection;
 
 interface CourseRepositoryInterface
 {
-    // public function all();
-    // public function find($id);
-    // public function create(array $data);
-    // public function update($id, array $data);
-    // public function delete($id);
+    public function all(): Collection;
+    public function find(int $id): ?object;
+    public function create(array $data): object;
+    public function update(int $id, array $data): bool;
+    public function delete(int $id): bool;
 }

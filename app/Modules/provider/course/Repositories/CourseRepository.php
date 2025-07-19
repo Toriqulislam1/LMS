@@ -1,38 +1,38 @@
-
 <?php
-namespace App\Modules\provider\auth\Repositories;
+namespace App\Modules\provider\course\Repositories;
 
-use App\Modules\provider\auth\Repositories\AdminRepositoryInterface;
+use App\Modules\provider\course\Repositories\CourseRepositoryInterface;
 
-use App\Models\Admin;
+use App\Models\Course;
+use Illuminate\Support\Collection;
 
 
-class CourseRepository implements AdminRepositoryInterface
+class CourseRepository implements CourseRepositoryInterface
 {
-    // public function all()
-    // {
-    //     return Admin::all();
-    // }
+     public function all(): Collection
+    {
+        return Course::all();
+    }
 
-    // public function find($id)
-    // {
-    //     return Admin::findOrFail($id);
-    // }
+    public function find(int $id): ?Course
+    {
+        return Course::find($id);
+    }
 
-    // public function create(array $data)
-    // {
-    //     return Admin::create($data);
-    // }
+    public function create(array $data): Course
+    {
+        return Course::create($data);
+    }
 
-    // public function update($id, array $data)
-    // {
-    //     $admin = Admin::findOrFail($id);
-    //     $admin->update($data);
-    //     return $admin;
-    // }
+    public function update(int $id, array $data): bool
+    {
+        $course = Course::find($id);
+        return $course ? $course->update($data) : false;
+    }
 
-    // public function delete($id)
-    // {
-    //     return Admin::destroy($id);
-    // }
+    public function delete(int $id): bool
+    {
+        $course = Course::find($id);
+        return $course ? $course->delete() : false;
+    }
 }
