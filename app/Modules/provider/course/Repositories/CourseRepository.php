@@ -7,7 +7,7 @@ use App\Modules\provider\auth\Repositories\AdminRepositoryInterface;
 use App\Models\Admin;
 
 
-class AdminRepository implements AdminRepositoryInterface
+class CourseRepository implements AdminRepositoryInterface
 {
     // public function all()
     // {

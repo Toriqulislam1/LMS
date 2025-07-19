@@ -22,4 +22,10 @@ class CourseController extends Controller
     public function create(){
         return view('provider.course.create');
     }
+
+    public function store(Request $request){
+        // উদাহরণ: Login বা কোনো Action সফল হলে
+    return redirect()->back()->with('success', 'Successfully Logged In');
+
+    }
 }

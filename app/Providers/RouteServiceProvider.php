@@ -20,8 +20,12 @@ class RouteServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        // Register custom route file
-        Route::middleware('web') // You can change this to 'api' or your custom middleware
-            ->group(base_path('routes/Provider.php'));
+            // $this->loadRoutes();
+
+    // Register custom admin route file
+    Route::middleware('web') // You can use 'api' if it's for APIs
+        ->prefix('provider')     // Optional: sets a prefix to all routes in the file
+        ->group(base_path('routes/provider.php'));
+
     }
 }

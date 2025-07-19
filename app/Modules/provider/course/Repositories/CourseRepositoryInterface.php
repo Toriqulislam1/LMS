@@ -1,7 +1,7 @@
 <?php
 namespace App\Modules\provider\auth\Repositories;
 
-interface AdminRepositoryInterface
+interface CourseRepositoryInterface
 {
     // public function all();
     // public function find($id);
