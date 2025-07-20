@@ -21,6 +21,7 @@ class CourseRepository implements CourseRepositoryInterface
 
     public function create(array $data): Course
     {
+        dd(444);
         return Course::create($data);
     }
 

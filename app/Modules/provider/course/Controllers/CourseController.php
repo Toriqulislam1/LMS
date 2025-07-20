@@ -4,7 +4,7 @@ namespace App\Modules\provider\course\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Modules\provider\course\Repositories\CourseRepositoryInterface;
-use Illuminate\Http\Request;
+use App\Modules\provider\course\Requests\CourseRequest;
 use Illuminate\Support\Facades\Auth;
 
 class CourseController extends Controller
@@ -28,16 +28,9 @@ class CourseController extends Controller
         return view('provider.course.create');
     }
 
-    public function store(Request $request)
+    public function store(CourseRequest $request)
     {
-        $validated = $request->validate([
-            'title' => 'required|string|max:255',
-            'description' => 'nullable|string',
-            'duration' => 'required|string|max:100',
-        ]);
-
-        $this->courseRepo->store($validated);
-
+        $this->courseRepo->create($request->all());
         return redirect()->route('provider.course.index')->with('success', 'Course created successfully.');
     }
 

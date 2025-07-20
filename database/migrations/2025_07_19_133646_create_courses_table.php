@@ -16,9 +16,10 @@ return new class extends Migration
             $table->string('title',100);
             $table->string('sub_title',100);
             $table->string('short_description',200);
-            $table->text('description')->nullable();
+            $table->text('description',5000)->nullable();
             $table->string('start_date',100);
             $table->string('end_date',100);
+            $table->string('duration_month',50)->nullable();
             $table->decimal('price', 10, 2)->default(0);
             $table->decimal('discount',10,2)->default(0);
             $table->string('slug')->unique();

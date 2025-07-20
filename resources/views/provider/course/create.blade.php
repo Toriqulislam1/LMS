@@ -26,7 +26,8 @@
     </div>
 
     <!-- Form Section -->
-    <form action="" method="POST" enctype="multipart/form-data">
+    <form action="{{route('courses.store')}}" method="POST" enctype="multipart/form-data">
+        @csrf
         <div class="grid grid-cols-12 gap-6">
             <div class="col-span-12 space-y-6">
                 <div class="rounded-2xl border border-gray-200 bg-white dark:border-gray-800 dark:bg-white/[0.03]">
@@ -49,7 +50,15 @@
                             <label class="mb-1.5 block text-sm font-medium text-gray-700 dark:text-gray-400">
                                 Sub-Title
                             </label>
-                            <input type="text" name="subtitle" placeholder="Enter Your subtitle"
+                            <input type="text" name="sub_title" placeholder="Enter Your subtitle"
+                                class="h-11 w-full rounded-lg border border-gray-300 bg-transparent px-4 py-2.5 text-sm shadow-theme-xs focus:border-brand-300 focus:outline-hidden focus:ring-3 focus:ring-brand-500/10 dark:border-gray-700 dark:bg-gray-900 dark:text-white/90 dark:placeholder:text-white/30" />
+                        </div>
+                        <!-- Thumbnail -->
+                        <div>
+                            <label class="mb-1.5 block text-sm font-medium text-gray-700 dark:text-gray-400">
+                                Thumbnail
+                            </label>
+                            <input type="file" name="thumbnail_course" placeholder=""
                                 class="h-11 w-full rounded-lg border border-gray-300 bg-transparent px-4 py-2.5 text-sm shadow-theme-xs focus:border-brand-300 focus:outline-hidden focus:ring-3 focus:ring-brand-500/10 dark:border-gray-700 dark:bg-gray-900 dark:text-white/90 dark:placeholder:text-white/30" />
                         </div>
                         <!-- Course price -->
@@ -77,6 +86,14 @@
                             <input type="date" name="start_date"
                                 class="h-11 w-full rounded-lg border border-gray-300 bg-transparent px-4 py-2.5 text-sm shadow-theme-xs focus:border-brand-300 focus:outline-hidden focus:ring-3 focus:ring-brand-500/10 dark:border-gray-700 dark:bg-gray-900 dark:text-white/90 dark:placeholder:text-white/30" />
                         </div>
+                        <!-- End Date -->
+                        <div>
+                            <label class="mb-1.5 block text-sm font-medium text-gray-700 dark:text-gray-400">
+                                End Date
+                            </label>
+                            <input type="date" name="end_date"
+                                class="h-11 w-full rounded-lg border border-gray-300 bg-transparent px-4 py-2.5 text-sm shadow-theme-xs focus:border-brand-300 focus:outline-hidden focus:ring-3 focus:ring-brand-500/10 dark:border-gray-700 dark:bg-gray-900 dark:text-white/90 dark:placeholder:text-white/30" />
+                        </div>
 
                         <!-- Course duration -->
                         <div>
@@ -85,6 +102,16 @@
                             </label>
                             <input type="text" name="duration_month" placeholder="Enter Your Duration Month"
                                 class="h-11 w-full rounded-lg border border-gray-300 bg-transparent px-4 py-2.5 text-sm shadow-theme-xs focus:border-brand-300 focus:outline-hidden focus:ring-3 focus:ring-brand-500/10 dark:border-gray-700 dark:bg-gray-900 dark:text-white/90 dark:placeholder:text-white/30" />
+                        </div>
+
+                        <!--short Description with -->
+                        <div>
+                            <label class="mb-1.5 block text-sm font-medium text-gray-700 dark:text-gray-400">
+                               Short Description
+                            </label>
+                            <textarea id="" name="short_description" placeholder="Enter Your short Description"
+                                class="w-full rounded-lg border border-gray-300 p-2 text-gray-800 dark:bg-gray-900 dark:text-white/90 dark:border-gray-700">
+                            </textarea>
                         </div>
 
                         <!-- Description with Summernote -->
