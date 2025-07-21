@@ -21,8 +21,11 @@ class CourseRepository implements CourseRepositoryInterface
 
     public function create(array $data): Course
     {
-        dd(444);
-        return Course::create($data);
+         $course = Course::create($data);
+        if ($data['thumbnail_course']) {
+            $course->addMedia($data['thumbnail_course'])->toMediaCollection('course_thumbnail');
+        }
+        return $course;
     }
 
     public function update(int $id, array $data): bool

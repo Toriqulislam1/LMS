@@ -15,14 +15,14 @@ class CourseRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'title'             => 'required|string|max:100',
-            'sub_title'         => 'nullable|string|max:100',
-            'price'             => 'required|numeric|min:0',
-            'start_date'        => 'nullable',
-            'thumbnail'         => 'required|image|mimes:jpg,jpeg,png|max:2048', // max 2MB
-            'short_description' => 'nullable|string|max:500',
-            'discount'          =>'nullable',
-            'description'       => 'nullable|string',
+            // 'title'             => 'required|string|max:100',
+            // 'sub_title'         => 'nullable|string|max:100',
+            // 'price'             => 'required',
+            // 'start_date'        => 'nullable',
+            // 'thumbnail'         => 'required|image|mimes:jpg,jpeg,png|max:2048', // max 2MB
+            // 'short_description' => 'nullable|string|max:500',
+            // 'discount'          =>'nullable',
+            // 'description'       => 'nullable|string',
         ];
     }
 
