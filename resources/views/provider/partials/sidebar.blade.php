@@ -1,10 +1,8 @@
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
 
-<aside
-    :class="sidebarToggle ? 'translate-x-0 lg:w-[90px]' : '-translate-x-full'"
-    class="sidebar fixed left-0 top-0 z-[9999] flex h-screen w-[290px] flex-col overflow-y-hidden border-r border-gray-200 bg-white px-5 dark:bg-white dark:border-gray-800 lg:static lg:translate-x-0 transition-transform duration-300 ease-in-out"
->
+<aside :class="sidebarToggle ? 'translate-x-0 lg:w-[90px]' : '-translate-x-full'"
+    class="sidebar fixed left-0 top-0 z-[9999] flex h-screen w-[290px] flex-col overflow-y-hidden border-r border-gray-200 bg-white px-5 dark:bg-white dark:border-gray-800 lg:static lg:translate-x-0 transition-transform duration-300 ease-in-out">
     <!-- SIDEBAR HEADER -->
     <div :class="sidebarToggle ? 'justify-center' : 'justify-between'"
         class="flex items-center gap-2 pt-8 sidebar-header pb-7">
@@ -44,39 +42,41 @@
                 <ul class="flex flex-col gap-4 mb-6">
                     <!-- Menu Item with submenu -->
                     <li x-data="{ open: false }" class="relative">
-                    <a href="#" @click.prevent="open = !open"
-                        class="menu-item group flex items-center justify-between text-gray-700 dark:text-gray-900"
-                        :class="open ? 'menu-item-active' : 'menu-item-inactive'">
+                        <a href="#" @click.prevent="open = !open"
+                            class="menu-item group flex items-center justify-between text-gray-700 dark:text-gray-900"
+                            :class="open ? 'menu-item-active' : 'menu-item-inactive'">
 
-                        <div class="flex items-center gap-2">
-                        <!-- Book Icon -->
-                        <svg :class="open ? 'text-primary' : 'text-gray-400 dark:text-gray-300'" width="24" height="24"
-                            viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill="currentColor" d="M19 2H8C6.897 2 6 2.897 6 4v16c0 1.103.897 2 2 2h11V2zM8 4h10v16H8V4z"/>
-                            <path fill="currentColor" d="M4 6H3v14c0 1.103.897 2 2 2h13v-1H5c-.552 0-1-.448-1-1V6z"/>
-                        </svg>
-                        <span class="menu-item-text">Course Manage</span>
+                            <div class="flex items-center gap-2">
+                                <!-- Book Icon -->
+                                <svg :class="open ? 'text-primary' : 'text-gray-400 dark:text-gray-300'" width="24"
+                                    height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill="currentColor"
+                                        d="M19 2H8C6.897 2 6 2.897 6 4v16c0 1.103.897 2 2 2h11V2zM8 4h10v16H8V4z" />
+                                    <path fill="currentColor"
+                                        d="M4 6H3v14c0 1.103.897 2 2 2h13v-1H5c-.552 0-1-.448-1-1V6z" />
+                                </svg>
+                                <span class="menu-item-text">Course Manage</span>
+                            </div>
+
+                            <svg :class="open ? 'rotate-180' : ''" class="stroke-current" width="20" height="20"
+                                viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4.79175 7.39584L10.0001 12.6042L15.2084 7.39585" stroke="currentColor"
+                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </a>
+
+                        <!-- Dropdown Menu -->
+                        <div x-show="open" x-transition x-cloak class="mt-2 pl-9">
+                            <ul class="flex flex-col gap-1">
+                                <li>
+                                    <a href="{{ route('courses.index') }}"
+                                        class="block px-2 py-1 text-sm text-gray-600 dark:text-gray-700 hover:text-primary">
+                                        Course
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
-
-                        <svg :class="open ? 'rotate-180' : ''"
-                            class="stroke-current" width="20" height="20"
-                            viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M4.79175 7.39584L10.0001 12.6042L15.2084 7.39585" stroke="currentColor"
-                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </a>
-
-                    <!-- Dropdown Menu -->
-                    <div x-show="open" x-transition x-cloak class="mt-2 pl-9">
-                        <ul class="flex flex-col gap-1">
-                        <li>
-                            <a href="{{ route('courses.index') }}"
-                            class="block px-2 py-1 text-sm text-gray-600 dark:text-gray-700 hover:text-primary">
-                            Course
-                            </a>
-                        </li>
-                        </ul>
-                    </div>
                     </li>
                     <!-- End Menu Item course -->
 
@@ -87,7 +87,8 @@
                             :class="open ? 'menu-item-active' : 'menu-item-inactive'">
 
                             <div class="flex items-center gap-2">
-                                <svg :class="open ? 'text-primary' : 'text-gray-400 dark:text-gray-300'" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                <svg :class="open ? 'text-primary' : 'text-gray-400 dark:text-gray-300'" width="24"
+                                    height="24" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" clip-rule="evenodd"
                                         d="M14 2.75C14 2.33579 14.3358 2 14.75 2C15.1642 2 15.5 2.33579 15.5 2.75V5.73291H19C19.4142 5.73291 19.75 6.0687 19.75 6.48291C19.75 6.89712 19.4142 7.23291 19 7.23291H18.5V12.2329C18.5 15.5691 15.9866 18.3183 12.75 18.6901V21.25C12.75 21.6642 12.4142 22 12 22C11.5858 22 11.25 21.6642 11.25 21.25V18.6901C8.01342 18.3183 5.5 15.5691 5.5 12.2329V7.23291H5C4.58579 7.23291 4.25 6.89712 4.25 6.48291C4.25 6.0687 4.58579 5.73291 5 5.73291H10V2.75C10 2.33579 10.3358 2 10.75 2C11.1642 2 11.5 2.33579 11.5 2.75V5.73291H14ZM7 7.23291V12.2329C7 14.9943 9.23858 17.2329 12 17.2329C14.7614 17.2329 17 14.9943 17 12.2329V7.23291H7Z"
@@ -96,8 +97,7 @@
                                 <span class="menu-item-text">Manage Shop</span>
                             </div>
 
-                            <svg :class="open ? 'rotate-180' : ''"
-                                class="stroke-current" width="20" height="20"
+                            <svg :class="open ? 'rotate-180' : ''" class="stroke-current" width="20" height="20"
                                 viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M4.79175 7.39584L10.0001 12.6042L15.2084 7.39585" stroke="currentColor"
                                     stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
@@ -119,7 +119,7 @@
                                         Permission
                                     </a>
                                 </li>
-                                                                <li>
+                                <li>
                                     <a href="signup.html"
                                         class="block px-2 py-1 text-sm text-gray-600 dark:text-gray-700 hover:text-primary">
                                         User
@@ -136,7 +136,8 @@
                             :class="open ? 'menu-item-active' : 'menu-item-inactive'">
 
                             <div class="flex items-center gap-2">
-                                <svg :class="open ? 'text-primary' : 'text-gray-400 dark:text-gray-300'" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                <svg :class="open ? 'text-primary' : 'text-gray-400 dark:text-gray-300'" width="24"
+                                    height="24" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" clip-rule="evenodd"
                                         d="M14 2.75C14 2.33579 14.3358 2 14.75 2C15.1642 2 15.5 2.33579 15.5 2.75V5.73291H19C19.4142 5.73291 19.75 6.0687 19.75 6.48291C19.75 6.89712 19.4142 7.23291 19 7.23291H18.5V12.2329C18.5 15.5691 15.9866 18.3183 12.75 18.6901V21.25C12.75 21.6642 12.4142 22 12 22C11.5858 22 11.25 21.6642 11.25 21.25V18.6901C8.01342 18.3183 5.5 15.5691 5.5 12.2329V7.23291H5C4.58579 7.23291 4.25 6.89712 4.25 6.48291C4.25 6.0687 4.58579 5.73291 5 5.73291H10V2.75C10 2.33579 10.3358 2 10.75 2C11.1642 2 11.5 2.33579 11.5 2.75V5.73291H14ZM7 7.23291V12.2329C7 14.9943 9.23858 17.2329 12 17.2329C14.7614 17.2329 17 14.9943 17 12.2329V7.23291H7Z"
@@ -145,9 +146,9 @@
                                 <span class="menu-item-text">Manage Blog</span>
                             </div>
 
-                            <svg :class="open ? 'rotate-180' : ''"
-                                class="stroke-current" width="20" height="20"
-                                viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg :class="open ? 'rotate-180' : ''" class="stroke-current" width="20"
+                                height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
                                 <path d="M4.79175 7.39584L10.0001 12.6042L15.2084 7.39585" stroke="currentColor"
                                     stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
@@ -168,7 +169,7 @@
                                         Permission
                                     </a>
                                 </li>
-                                                                <li>
+                                <li>
                                     <a href="signup.html"
                                         class="block px-2 py-1 text-sm text-gray-600 dark:text-gray-700 hover:text-primary">
                                         User
@@ -185,7 +186,8 @@
                             :class="open ? 'menu-item-active' : 'menu-item-inactive'">
 
                             <div class="flex items-center gap-2">
-                                <svg :class="open ? 'text-primary' : 'text-gray-400 dark:text-gray-300'" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                <svg :class="open ? 'text-primary' : 'text-gray-400 dark:text-gray-300'"
+                                    width="24" height="24" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" clip-rule="evenodd"
                                         d="M14 2.75C14 2.33579 14.3358 2 14.75 2C15.1642 2 15.5 2.33579 15.5 2.75V5.73291H19C19.4142 5.73291 19.75 6.0687 19.75 6.48291C19.75 6.89712 19.4142 7.23291 19 7.23291H18.5V12.2329C18.5 15.5691 15.9866 18.3183 12.75 18.6901V21.25C12.75 21.6642 12.4142 22 12 22C11.5858 22 11.25 21.6642 11.25 21.25V18.6901C8.01342 18.3183 5.5 15.5691 5.5 12.2329V7.23291H5C4.58579 7.23291 4.25 6.89712 4.25 6.48291C4.25 6.0687 4.58579 5.73291 5 5.73291H10V2.75C10 2.33579 10.3358 2 10.75 2C11.1642 2 11.5 2.33579 11.5 2.75V5.73291H14ZM7 7.23291V12.2329C7 14.9943 9.23858 17.2329 12 17.2329C14.7614 17.2329 17 14.9943 17 12.2329V7.23291H7Z"
@@ -194,9 +196,9 @@
                                 <span class="menu-item-text">Web Setting</span>
                             </div>
 
-                            <svg :class="open ? 'rotate-180' : ''"
-                                class="stroke-current" width="20" height="20"
-                                viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg :class="open ? 'rotate-180' : ''" class="stroke-current" width="20"
+                                height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
                                 <path d="M4.79175 7.39584L10.0001 12.6042L15.2084 7.39585" stroke="currentColor"
                                     stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
@@ -206,21 +208,69 @@
                         <div x-show="open" x-transition x-cloak class="mt-2 pl-9">
                             <ul class="flex flex-col gap-1">
                                 <li>
-                                    <a href="signin.html"
+                                    <a href="{{ route('settings-general') }}"
                                         class="block px-2 py-1 text-sm text-gray-600 dark:text-gray-700 hover:text-primary">
-                                        Role
+                                        🔧 General Settings
                                     </a>
                                 </li>
                                 <li>
                                     <a href="signup.html"
                                         class="block px-2 py-1 text-sm text-gray-600 dark:text-gray-700 hover:text-primary">
-                                        Permission
+                                        👥 User Settings
                                     </a>
                                 </li>
-                                                                <li>
+                                <li>
                                     <a href="signup.html"
                                         class="block px-2 py-1 text-sm text-gray-600 dark:text-gray-700 hover:text-primary">
-                                        User
+                                        ✉️ Contact Settings
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="signup.html"
+                                        class="block px-2 py-1 text-sm text-gray-600 dark:text-gray-700 hover:text-primary">
+                                        📢 SEO Settings
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="signup.html"
+                                        class="block px-2 py-1 text-sm text-gray-600 dark:text-gray-700 hover:text-primary">
+                                        📬 Email Settings
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="signup.html"
+                                        class="block px-2 py-1 text-sm text-gray-600 dark:text-gray-700 hover:text-primary">
+                                        📱 Social Media Links
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="signup.html"
+                                        class="block px-2 py-1 text-sm text-gray-600 dark:text-gray-700 hover:text-primary">
+                                        🖼️ Media Settings
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="signup.html"
+                                        class="block px-2 py-1 text-sm text-gray-600 dark:text-gray-700 hover:text-primary">
+                                        🔐 Security Settings
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="signup.html"
+                                        class="block px-2 py-1 text-sm text-gray-600 dark:text-gray-700 hover:text-primary">
+                                        💰 Payment Settings
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="signup.html"
+                                        class="block px-2 py-1 text-sm text-gray-600 dark:text-gray-700 hover:text-primary">
+                                        🧩 Third-Party Integrations
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="signup.html"
+                                        class="block px-2 py-1 text-sm text-gray-600 dark:text-gray-700 hover:text-primary">
+                                        🛠️ System Settings
                                     </a>
                                 </li>
                             </ul>
@@ -234,7 +284,8 @@
                             :class="open ? 'menu-item-active' : 'menu-item-inactive'">
 
                             <div class="flex items-center gap-2">
-                                <svg :class="open ? 'text-primary' : 'text-gray-400 dark:text-gray-300'" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                <svg :class="open ? 'text-primary' : 'text-gray-400 dark:text-gray-300'"
+                                    width="24" height="24" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" clip-rule="evenodd"
                                         d="M14 2.75C14 2.33579 14.3358 2 14.75 2C15.1642 2 15.5 2.33579 15.5 2.75V5.73291H19C19.4142 5.73291 19.75 6.0687 19.75 6.48291C19.75 6.89712 19.4142 7.23291 19 7.23291H18.5V12.2329C18.5 15.5691 15.9866 18.3183 12.75 18.6901V21.25C12.75 21.6642 12.4142 22 12 22C11.5858 22 11.25 21.6642 11.25 21.25V18.6901C8.01342 18.3183 5.5 15.5691 5.5 12.2329V7.23291H5C4.58579 7.23291 4.25 6.89712 4.25 6.48291C4.25 6.0687 4.58579 5.73291 5 5.73291H10V2.75C10 2.33579 10.3358 2 10.75 2C11.1642 2 11.5 2.33579 11.5 2.75V5.73291H14ZM7 7.23291V12.2329C7 14.9943 9.23858 17.2329 12 17.2329C14.7614 17.2329 17 14.9943 17 12.2329V7.23291H7Z"
@@ -243,9 +294,9 @@
                                 <span class="menu-item-text">User & Role</span>
                             </div>
 
-                            <svg :class="open ? 'rotate-180' : ''"
-                                class="stroke-current" width="20" height="20"
-                                viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg :class="open ? 'rotate-180' : ''" class="stroke-current" width="20"
+                                height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
                                 <path d="M4.79175 7.39584L10.0001 12.6042L15.2084 7.39585" stroke="currentColor"
                                     stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
@@ -266,7 +317,7 @@
                                         Permission
                                     </a>
                                 </li>
-                                                                <li>
+                                <li>
                                     <a href="signup.html"
                                         class="block px-2 py-1 text-sm text-gray-600 dark:text-gray-700 hover:text-primary">
                                         User
