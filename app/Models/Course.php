@@ -12,4 +12,11 @@ class Course extends Model implements HasMedia
         protected $fillable = [
         'title','sub_title','short_description', 'description', 'slug', 'price', 'discount','status'
     ];
+
+    public function getImageUrlAttribute()
+    {
+        return $this->getFirstMediaUrl('thumbnail_course') ?: asset('default-image.jpg');
+    }
+
+
 }

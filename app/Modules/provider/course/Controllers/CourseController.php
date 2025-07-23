@@ -46,12 +46,10 @@ public function index()
         return [
             'id' => $course->id,
             'name' => $course->title,
-            'image' => $course->image_url ?? 'default-image.jpg', // replace with actual attribute or URL
-            'position' => $course->category_name ?? 'N/A',       // map category or other field
-            'office' => $course->instructor_name ?? 'N/A',       // example field
-            'age' => $course->duration ?? 'N/A',                  // example field
+            'image' => $course->getFirstMediaUrl('thumbnail_course') ?: asset('default-image.jpg'), // ✅ Corrected
+            'price' => $course->price ? "$" . $course->price : "Free",
+            'discount' => $course->discount ?? 'N/A',
             'startDate' => $course->created_at->format('d M, Y'),
-            'salary' => $course->price ? "$" . $course->price : "Free",
         ];
     });
 
@@ -69,6 +67,32 @@ public function index()
     {
         $this->courseRepo->create($request->all());
         return redirect()->back()->with('success', 'Course created successfully.');
+    }
+    public function edit($id)
+    {
+        $course = $this->courseRepo->find($id);
+        if (!$course) {
+            return redirect()->back()->with('error', 'Course not found.');
+        }
+        return view('provider.course.edit', compact('course'));
+    }
+    public function update(CourseRequest $request, $id)
+    {
+        $course = $this->courseRepo->find($id);
+        if (!$course) {
+            return redirect()->back()->with('error', 'Course not found.');
+        }
+        $this->courseRepo->update($id, $request->all());
+        return redirect()->back()->with('success', 'Course updated successfully.');
+    }
+    public function destroy($id)
+    {
+        $course = $this->courseRepo->find($id);
+        if (!$course) {
+            return redirect()->back()->with('error', 'Course not found.');
+        }
+        $this->courseRepo->delete($id);
+        return redirect()->back()->with('success', 'Course deleted successfully.');
     }
 
 }

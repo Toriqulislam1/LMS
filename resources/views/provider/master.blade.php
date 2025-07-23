@@ -15,7 +15,8 @@
 
     <!-- jQuery (MUST be before Summernote JS) -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
+    <!-- sweetalert2 CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- Summernote CSS -->
     <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.20/dist/summernote-lite.min.css" rel="stylesheet">
 

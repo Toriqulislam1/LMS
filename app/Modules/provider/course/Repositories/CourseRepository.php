@@ -23,7 +23,7 @@ class CourseRepository implements CourseRepositoryInterface
     {
          $course = Course::create($data);
         if ($data['thumbnail_course']) {
-            $course->addMedia($data['thumbnail_course'])->toMediaCollection('course_thumbnail');
+            $course->addMedia($data['thumbnail_course'])->toMediaCollection('thumbnail_course');
         }
         return $course;
     }
