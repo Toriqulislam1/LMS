@@ -16,53 +16,25 @@ class CourseController extends Controller
         $this->middleware('auth:admin');
         $this->courseRepo = $courseRepo;
     }
+    public function index()
+    {
+        $courses = $this->courseRepo->all()->map(function ($course) {
+            return [
+                'id' => $course->id,
+                'name' => $course->title,
+                'image' => $course->getFirstMediaUrl('thumbnail_course') ?: asset('default-image.jpg'), // ✅ Corrected
+                'price' => $course->price ? "$" . $course->price : "Free",
+                'discount' => $course->discount ?? 'N/A',
+                'startDate' => $course->created_at->format('d M, Y'),
+            ];
+        });
 
-    // public function index()
-    // {
-    //     $data['courses'] = $this->courseRepo->all();
-    //     return view('provider.course.index',$data);
-    // }
-
-//     public function index()
-// {
-//     $data['courses'] = $this->courseRepo->all();
-//     $data['coursesJson'] = $data['courses']->map(function ($course) {
-//         return [
-//             'id' => $course->id,
-//             'name' => $course->title,
-//             'position' => $course->price,
-//             'office' => $course->discount,
-//             'age' => $course->duration_month,
-//             'startDate' => $course->start_date,
-//             'image' => $course->getFirstMediaUrl('course_thumbnail') ?: asset('default-thumbnail.jpg'),
-//         ];
-//     });
-
-//     return view('provider.course.index', $data);
-// }
-public function index()
-{
-    $courses = $this->courseRepo->all()->map(function ($course) {
-        return [
-            'id' => $course->id,
-            'name' => $course->title,
-            'image' => $course->getFirstMediaUrl('thumbnail_course') ?: asset('default-image.jpg'), // ✅ Corrected
-            'price' => $course->price ? "$" . $course->price : "Free",
-            'discount' => $course->discount ?? 'N/A',
-            'startDate' => $course->created_at->format('d M, Y'),
-        ];
-    });
-
-    return view('provider.course.index', compact('courses'));
-}
-
-
-
+        return view('provider.course.index', compact('courses'));
+    }
     public function create()
     {
         return view('provider.course.create');
     }
-
     public function store(CourseRequest $request)
     {
         $this->courseRepo->create($request->all());

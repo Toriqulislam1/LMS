@@ -26,8 +26,9 @@
     </div>
 
     <!-- Form Section -->
-    <form action="{{route('courses.store')}}" method="POST" enctype="multipart/form-data">
+    <form action="{{route('courses.update', $course->id)}}" method="POST" enctype="multipart/form-data">
         @csrf
+        @method('PUT')
         <div class="grid grid-cols-12 gap-6">
             <div class="col-span-12 space-y-6">
                 <div class="rounded-2xl border border-gray-200 bg-white dark:border-gray-800 dark:bg-white/[0.03]">
@@ -41,8 +42,8 @@
                         <label class="mb-1.5 block text-sm font-medium text-gray-800 dark:text-gray-800">
                             Title
                         </label>
-                        <input type="text" name="title" placeholder="Enter Your Course Title"
-                            class="h-11 w-full rounded-lg border border-gray-300 bg-white px-4 py-2.5 text-sm shadow-theme-xs focus:border-brand-300 focus:outline-hidden focus:ring-3 focus:ring-brand-500/10 dark:border-gray-600 dark:text-gray-900 dark:placeholder:text-gray-500" />
+                        <input type="text" name="title" placeholder="Enter Your Course Title" value="{{ $course->title }}"
+                            class="h-11 w-full  rounded-lg border border-gray-300 bg-white px-4 py-2.5 text-sm shadow-theme-xs focus:border-brand-300 focus:outline-hidden focus:ring-3 focus:ring-brand-500/10 dark:border-gray-600 dark:text-gray-900 dark:placeholder:text-gray-500" />
                         </div>
 
                       <!-- Sub-title -->
@@ -50,7 +51,7 @@
                             <label class="mb-1.5 block text-sm font-medium text-gray-700 dark:text-gray-700">
                                 Sub-Title
                             </label>
-                            <input type="text" name="sub_title" placeholder="Enter Your subtitle"
+                            <input type="text" name="sub_title" placeholder="Enter Your subtitle" value="{{ $course->sub_title }}"
                                 class="h-11 w-full rounded-lg border border-gray-300 bg-white dark:bg-white px-4 py-2.5 text-sm shadow-theme-xs focus:border-brand-300 focus:outline-hidden focus:ring-3 focus:ring-brand-500/10 dark:border-gray-300 dark:text-gray-900 dark:placeholder:text-gray-500" />
                         </div>
 
@@ -68,7 +69,7 @@
                             <label class="mb-1.5 block text-sm font-medium text-gray-700 dark:text-gray-700">
                                 Course Price
                             </label>
-                            <input type="text" name="price" placeholder="Enter Your Course Price"
+                            <input type="text" name="price" placeholder="Enter Your Course Price" value="{{ $course->price }}"
                                 class="h-11 w-full rounded-lg border border-gray-300 bg-white dark:bg-white px-4 py-2.5 text-sm shadow-theme-xs focus:border-brand-300 focus:outline-hidden focus:ring-3 focus:ring-brand-500/10 dark:border-gray-300 dark:text-gray-900 dark:placeholder:text-gray-500" />
                         </div>
 
@@ -77,7 +78,7 @@
                             <label class="mb-1.5 block text-sm font-medium text-gray-700 dark:text-gray-700">
                                 Course Discount
                             </label>
-                            <input type="text" name="discount" placeholder="Enter Your Course Discount"
+                            <input type="text" name="discount" placeholder="Enter Your Course Discount" value="{{ $course->discount }}"
                                 class="h-11 w-full rounded-lg border border-gray-300 bg-white dark:bg-white px-4 py-2.5 text-sm shadow-theme-xs focus:border-brand-300 focus:outline-hidden focus:ring-3 focus:ring-brand-500/10 dark:border-gray-300 dark:text-gray-900 dark:placeholder:text-gray-500" />
                         </div>
 
@@ -86,7 +87,7 @@
                             <label class="mb-1.5 block text-sm font-medium text-gray-700 dark:text-gray-700">
                                 Start Date
                             </label>
-                            <input type="date" name="start_date"
+                            <input type="date" name="start_date" value="{{ $course->start_date }}"
                                 class="h-11 w-full rounded-lg border border-gray-300 bg-white dark:bg-white px-4 py-2.5 text-sm shadow-theme-xs focus:border-brand-300 focus:outline-hidden focus:ring-3 focus:ring-brand-500/10 dark:border-gray-300 dark:text-gray-900 dark:placeholder:text-gray-500" />
                         </div>
 
@@ -95,7 +96,7 @@
                             <label class="mb-1.5 block text-sm font-medium text-gray-700 dark:text-gray-700">
                                 End Date
                             </label>
-                            <input type="date" name="end_date"
+                            <input type="date" name="end_date" value="{{ $course->end_date }}"
                                 class="h-11 w-full rounded-lg border border-gray-300 bg-white dark:bg-white px-4 py-2.5 text-sm shadow-theme-xs focus:border-brand-300 focus:outline-hidden focus:ring-3 focus:ring-brand-500/10 dark:border-gray-300 dark:text-gray-900 dark:placeholder:text-gray-500" />
                         </div>
 
@@ -104,7 +105,7 @@
                             <label class="mb-1.5 block text-sm font-medium text-gray-700 dark:text-gray-700">
                                 Course Duration
                             </label>
-                            <input type="text" name="duration_month" placeholder="Enter Your Duration Month"
+                            <input type="text" name="duration_month" placeholder="Enter Your Duration Month" value="{{ $course->duration_month }}"
                                 class="h-11 w-full rounded-lg border border-gray-300 bg-white dark:bg-white px-4 py-2.5 text-sm shadow-theme-xs focus:border-brand-300 focus:outline-hidden focus:ring-3 focus:ring-brand-500/10 dark:border-gray-300 dark:text-gray-900 dark:placeholder:text-gray-500" />
                         </div>
 
@@ -113,7 +114,7 @@
                             <label class="mb-1.5 block text-sm font-medium text-gray-700 dark:text-gray-700">
                                 Short Description
                             </label>
-                            <textarea name="short_description" placeholder="Enter Your short Description"
+                            <textarea name="short_description" placeholder="Enter Your short Description" value="{{ $course->short_description }}"
                                 class="w-full rounded-lg border border-gray-300 bg-white dark:bg-white p-2 text-gray-800 dark:text-gray-900 dark:border-gray-300 dark:placeholder:text-gray-500"></textarea>
                         </div>
 
@@ -122,14 +123,14 @@
                             <label class="mb-1.5 block text-sm font-medium text-gray-700 dark:text-gray-400">
                                 Description
                             </label>
-                            <textarea id="summernote" name="description"
+                            <textarea id="summernote" name="description" placeholder="Enter Your Description" value="{{ $course->description }}"
                                 class="w-full rounded-lg border border-gray-300 p-2 text-gray-800 dark:bg-gray-900 dark:text-white/90 dark:border-gray-700"></textarea>
                         </div>
 
                         <!-- Action Buttons -->
                         <div class="flex justify-start gap-4 mt-6 px-5 sm:px-6 pb-6">
                             <!-- Back Button -->
-                            <a href=""
+                            <a href="{{ route('courses.index') }}"
                                 class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-700 bg-gray-200 rounded-lg hover:bg-gray-300 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600">
                                 ← Back
                             </a>
