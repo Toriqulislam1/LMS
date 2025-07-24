@@ -1,9 +1,9 @@
 <?php
-namespace App\Modules\provider\course\Repositories;
+namespace App\Modules\provider\blog\Repositories;
 
 use Illuminate\Support\Collection;
 
-interface CourseRepositoryInterface
+interface BlogRepositoryInterface
 {
     public function all(): Collection;
     public function find(int $id): ?object;

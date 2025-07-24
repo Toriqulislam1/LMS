@@ -7,12 +7,12 @@
             <div class="px-5 py-4 sm:px-6 sm:py-5">
                 <div class="flex items-center justify-between">
                     <h3 class="text-base font-medium text-black dark:text-white">
-                        <a href="{{ route('courses.index') }}"
+                        <a href="{{ route('admin-dashboard') }}"
                             class="inline-flex items-center rounded-lg bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:bg-blue-500 dark:hover:bg-blue-600">
                             Back
                         </a>
                     </h3>
-                    <a href="{{ route('courses.create') }}"
+                    <a href="{{ route('blogs.create') }}"
                         class="inline-flex items-center rounded-lg bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:bg-blue-500 dark:hover:bg-blue-600">
                         Create
                     </a>
@@ -20,7 +20,7 @@
             </div>
             <div class="border-t border-gray-100 p-5 dark:border-gray-800 sm:p-6">
                 <!-- ====== DataTable One Start -->
-                <div x-data="dataTable({{ $courses->toJson() }})"
+                <div x-data="dataTable({{ $blogs->toJson() }})"
                     class="overflow-hidden rounded-xl border border-gray-200 bg-white pt-4 dark:border-gray-800 dark:bg-white/[0.03]">
                     <div class="mb-4 flex flex-col gap-2 px-4 sm:flex-row sm:items-center sm:justify-between">
                         <div class="flex items-center gap-3">
@@ -228,10 +228,10 @@
                             </div>
                             <!-- table header end -->
                             <div x-data="{
-                                paginatedData: @json($courses),
+                                paginatedData: @json($blogs),
                             }">
                                 <!-- table body start -->
-                                <template x-for="course in paginatedData" :key="course.id">
+                                <template x-for="blog in paginatedData" :key="blog.id">
                                     <div class="grid grid-cols-12 border-t border-gray-100 dark:border-gray-800">
                                         <div
                                             class="col-span-2 flex items-center border-r border-gray-100 px-4 py-3 dark:border-gray-800">

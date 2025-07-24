@@ -6,11 +6,11 @@
     <!-- Breadcrumb -->
     <div>
         <div class="mb-6 flex flex-wrap items-center justify-between gap-3">
-            <h2 class="text-xl font-semibold text-gray-800 dark:text-white/90">Course</h2>
+            <h2 class="text-xl font-semibold text-gray-800 dark:text-white/90">Create Blog</h2>
             <nav>
                 <ol class="flex items-center gap-1.5">
                     <li>
-                        <a class="inline-flex items-center gap-1.5 text-sm text-gray-500 dark:text-gray-400" href="">
+                        <a class="inline-flex items-center gap-1.5 text-sm text-gray-500 dark:text-gray-400" href="{{ route('admin-dashboard') }}">
                             Home
                             <svg class="stroke-current" width="17" height="16" viewBox="0 0 17 16" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -19,14 +19,14 @@
                             </svg>
                         </a>
                     </li>
-                    <li class="text-sm text-gray-800 dark:text-white/90">Course</li>
+                    <li class="text-sm text-gray-800 dark:text-white/90">Create Blog</li>
                 </ol>
             </nav>
         </div>
     </div>
 
     <!-- Form Section -->
-    <form action="{{route('courses.store')}}" method="POST" enctype="multipart/form-data">
+    <form action="{{route('blogs.store')}}" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="grid grid-cols-12 gap-6">
             <div class="col-span-12 space-y-6">
@@ -129,7 +129,7 @@
                         <!-- Action Buttons -->
                         <div class="flex justify-start gap-4 mt-6 px-5 sm:px-6 pb-6">
                             <!-- Back Button -->
-                            <a href=""
+                            <a href="{{route('blogs.index')}}"
                                 class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-700 bg-gray-200 rounded-lg hover:bg-gray-300 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600">
                                 ← Back
                             </a>

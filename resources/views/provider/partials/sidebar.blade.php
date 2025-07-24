@@ -108,21 +108,9 @@
                         <div x-show="open" x-transition x-cloak class="mt-2 pl-9">
                             <ul class="flex flex-col gap-1">
                                 <li>
-                                    <a href="signin.html"
+                                    <a href="#"
                                         class="block px-2 py-1 text-sm text-gray-600 dark:text-gray-700 hover:text-primary">
-                                        Role
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="signup.html"
-                                        class="block px-2 py-1 text-sm text-gray-600 dark:text-gray-700 hover:text-primary">
-                                        Permission
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="signup.html"
-                                        class="block px-2 py-1 text-sm text-gray-600 dark:text-gray-700 hover:text-primary">
-                                        User
+                                        Shop
                                     </a>
                                 </li>
                             </ul>
@@ -158,21 +146,9 @@
                         <div x-show="open" x-transition x-cloak class="mt-2 pl-9">
                             <ul class="flex flex-col gap-1">
                                 <li>
-                                    <a href="signin.html"
+                                    <a href="{{ route('blogs.index') }}"
                                         class="block px-2 py-1 text-sm text-gray-600 dark:text-gray-700 hover:text-primary">
-                                        Role
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="signup.html"
-                                        class="block px-2 py-1 text-sm text-gray-600 dark:text-gray-700 hover:text-primary">
-                                        Permission
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="signup.html"
-                                        class="block px-2 py-1 text-sm text-gray-600 dark:text-gray-700 hover:text-primary">
-                                        User
+                                        Blog
                                     </a>
                                 </li>
                             </ul>

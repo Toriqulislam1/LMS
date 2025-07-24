@@ -1,10 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Modules\provider\course\Controllers\CourseController;
+use App\Modules\provider\blog\Controllers\BlogController;
 
 Route::group([],function () {
 
-    Route::resource('courses', CourseController::class);
+    Route::resource('blogs', BlogController::class);
 
 });
