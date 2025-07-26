@@ -59,62 +59,8 @@
                             <label class="mb-1.5 block text-sm font-medium text-gray-700 dark:text-gray-700">
                                 Thumbnail
                             </label>
-                            <input type="file" name="thumbnail_course"
+                            <input type="file" name="thumbnail_blog" accept=".jpg,.jpeg,.png"
                                 class="h-11 w-full rounded-lg border border-gray-300 bg-white dark:bg-white px-4 py-2.5 text-sm shadow-theme-xs focus:border-brand-300 focus:outline-hidden focus:ring-3 focus:ring-brand-500/10 dark:border-gray-300 dark:text-gray-900 dark:placeholder:text-gray-500" />
-                        </div>
-
-                        <!-- Course price -->
-                        <div>
-                            <label class="mb-1.5 block text-sm font-medium text-gray-700 dark:text-gray-700">
-                                Course Price
-                            </label>
-                            <input type="text" name="price" placeholder="Enter Your Course Price"
-                                class="h-11 w-full rounded-lg border border-gray-300 bg-white dark:bg-white px-4 py-2.5 text-sm shadow-theme-xs focus:border-brand-300 focus:outline-hidden focus:ring-3 focus:ring-brand-500/10 dark:border-gray-300 dark:text-gray-900 dark:placeholder:text-gray-500" />
-                        </div>
-
-                        <!-- Course Discount -->
-                        <div>
-                            <label class="mb-1.5 block text-sm font-medium text-gray-700 dark:text-gray-700">
-                                Course Discount
-                            </label>
-                            <input type="text" name="discount" placeholder="Enter Your Course Discount"
-                                class="h-11 w-full rounded-lg border border-gray-300 bg-white dark:bg-white px-4 py-2.5 text-sm shadow-theme-xs focus:border-brand-300 focus:outline-hidden focus:ring-3 focus:ring-brand-500/10 dark:border-gray-300 dark:text-gray-900 dark:placeholder:text-gray-500" />
-                        </div>
-
-                        <!-- Start Date -->
-                        <div>
-                            <label class="mb-1.5 block text-sm font-medium text-gray-700 dark:text-gray-700">
-                                Start Date
-                            </label>
-                            <input type="date" name="start_date"
-                                class="h-11 w-full rounded-lg border border-gray-300 bg-white dark:bg-white px-4 py-2.5 text-sm shadow-theme-xs focus:border-brand-300 focus:outline-hidden focus:ring-3 focus:ring-brand-500/10 dark:border-gray-300 dark:text-gray-900 dark:placeholder:text-gray-500" />
-                        </div>
-
-                        <!-- End Date -->
-                        <div>
-                            <label class="mb-1.5 block text-sm font-medium text-gray-700 dark:text-gray-700">
-                                End Date
-                            </label>
-                            <input type="date" name="end_date"
-                                class="h-11 w-full rounded-lg border border-gray-300 bg-white dark:bg-white px-4 py-2.5 text-sm shadow-theme-xs focus:border-brand-300 focus:outline-hidden focus:ring-3 focus:ring-brand-500/10 dark:border-gray-300 dark:text-gray-900 dark:placeholder:text-gray-500" />
-                        </div>
-
-                        <!-- Course duration -->
-                        <div>
-                            <label class="mb-1.5 block text-sm font-medium text-gray-700 dark:text-gray-700">
-                                Course Duration
-                            </label>
-                            <input type="text" name="duration_month" placeholder="Enter Your Duration Month"
-                                class="h-11 w-full rounded-lg border border-gray-300 bg-white dark:bg-white px-4 py-2.5 text-sm shadow-theme-xs focus:border-brand-300 focus:outline-hidden focus:ring-3 focus:ring-brand-500/10 dark:border-gray-300 dark:text-gray-900 dark:placeholder:text-gray-500" />
-                        </div>
-
-                        <!-- Short Description -->
-                        <div>
-                            <label class="mb-1.5 block text-sm font-medium text-gray-700 dark:text-gray-700">
-                                Short Description
-                            </label>
-                            <textarea name="short_description" placeholder="Enter Your short Description"
-                                class="w-full rounded-lg border border-gray-300 bg-white dark:bg-white p-2 text-gray-800 dark:text-gray-900 dark:border-gray-300 dark:placeholder:text-gray-500"></textarea>
                         </div>
 
                         <!-- Description with Summernote -->

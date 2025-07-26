@@ -23,10 +23,9 @@ class BlogController extends Controller
             return [
                 'id' => $blog->id,
                 'name' => $blog->title,
+                'sub_title' => $blog->sub_title,
+                'description' => $blog->description,
                 'image' => $blog->getFirstMediaUrl('thumbnail_blog') ?: asset('default-image.jpg'),
-                'price' => $blog->price ? "$" . $blog->price : "Free",
-                'discount' => $blog->discount ?? 'N/A',
-                'startDate' => $blog->created_at->format('d M, Y'),
             ];
         });
 

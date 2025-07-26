@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Modules\provider\course\Requests;
+namespace App\Modules\provider\blog\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class CourseRequest extends FormRequest
+class BlogRequest extends FormRequest
 {
     public function authorize(): bool
     {
@@ -17,11 +17,7 @@ class CourseRequest extends FormRequest
         return [
             // 'title'             => 'required|string|max:100',
             // 'sub_title'         => 'nullable|string|max:100',
-            // 'price'             => 'required',
-            // 'start_date'        => 'nullable',
             // 'thumbnail'         => 'required|image|mimes:jpg,jpeg,png|max:2048', // max 2MB
-            // 'short_description' => 'nullable|string|max:500',
-            // 'discount'          =>'nullable',
             // 'description'       => 'nullable|string',
         ];
     }
@@ -29,8 +25,7 @@ class CourseRequest extends FormRequest
     public function messages(): array
     {
         return [
-            'title.required'     => 'Course title is required.',
-            'price.required'     => 'Price is required.',
+            'title.required'     => 'Blog title is required.',
             'thumbnail.required' => 'Thumbnail image is required.',
             'thumbnail.image'    => 'Thumbnail must be an image.',
             'thumbnail.mimes'    => 'Only jpg, jpeg, png formats are allowed.',
