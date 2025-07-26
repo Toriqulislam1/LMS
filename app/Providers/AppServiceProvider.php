@@ -12,6 +12,8 @@ use App\Modules\provider\setting\Repositories\SettingRepositoryInterface;
 use App\Modules\provider\setting\Repositories\SettingRepository;
 use App\Modules\provider\blog\Repositories\BlogRepositoryInterface;
 use App\Modules\provider\blog\Repositories\BlogRepository;
+use App\Modules\provider\shop\Repositories\ShopRepositoryInterface;
+use App\Modules\provider\shop\Repositories\ShopRepository;
 
 
 class AppServiceProvider extends ServiceProvider
@@ -25,6 +27,7 @@ class AppServiceProvider extends ServiceProvider
         $this->app->bind(CourseRepositoryInterface::class, CourseRepository::class);
         $this->app->bind(SettingRepositoryInterface::class, SettingRepository::class);
         $this->app->bind(\App\Modules\provider\blog\Repositories\BlogRepositoryInterface::class, \App\Modules\provider\blog\Repositories\BlogRepository::class);
+        $this->app->bind(\App\Modules\provider\shop\Repositories\ShopRepositoryInterface::class, \App\Modules\provider\shop\Repositories\ShopRepository::class);
     }
 
     /**

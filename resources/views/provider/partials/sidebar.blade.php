@@ -108,7 +108,7 @@
                         <div x-show="open" x-transition x-cloak class="mt-2 pl-9">
                             <ul class="flex flex-col gap-1">
                                 <li>
-                                    <a href="#"
+                                    <a href="{{ route('shops.index') }}"
                                         class="block px-2 py-1 text-sm text-gray-600 dark:text-gray-700 hover:text-primary">
                                         Shop
                                     </a>
