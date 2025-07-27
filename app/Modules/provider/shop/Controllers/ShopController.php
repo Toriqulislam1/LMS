@@ -23,7 +23,7 @@ class ShopController extends Controller
         $shops = $this->shopRepo->all()->map(function ($shop) {
             return [
                 'id' => $shop->id,
-                'name' => $shop->title,
+                'name' => $shop->name,
                 'sub_title' => $shop->sub_title,
                 'description' => $shop->description,
                 'image' => $shop->getFirstMediaUrl('thumbnail_shop') ?: asset('default-image.jpg'),

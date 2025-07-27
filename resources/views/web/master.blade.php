@@ -6,15 +6,15 @@
 <!-- Meta Tags -->
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
-<meta name="description" content="LearnPress | Education & Courses HTML Template" />
-<meta name="keywords" content="academy, course, education, education html theme, #, learning," />
+<meta name="description" content="{{ $generalSettings['settings']['website_description']}}" />
+<meta name="keywords" content="" />
 
 
 <!-- Page Title -->
-<title>LearnPress | Education & Courses HTML Template</title>
+<title>{{ $generalSettings['settings']['website_name']}}</title>
 
 <!-- Favicon and Touch Icons -->
-<link href="images/favicon.png" rel="shortcut icon" type="image/png">
+<link href="{{ $generalSettings['favicon'] }}" rel="shortcut icon" type="image/png">
 <link href="images/apple-touch-icon.png" rel="apple-touch-icon">
 <link href="images/apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
 <link href="images/apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">

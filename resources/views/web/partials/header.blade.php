@@ -36,24 +36,24 @@
         <div class="container">
           <nav id="menuzord-right" class="menuzord default">
             <a class="menuzord-brand pull-left flip" href="javascript:void(0)">
-              <img src="images/logo-wide.png" alt="">
+              <img src="{{ $generalSettings['logo'] }}" alt="">
             </a>
             <ul class="menuzord-menu">
-              <li class="active"><a href="#home">Home</a>
+              <li class="active"><a href="{{ url('/') }}">Home</a>
               </li>
-              <li><a href="#">Shop</a>
+              <li><a href="{{ route('shop') }}">Shop</a>
               </li>
-              <li><a href="#">Course</a>
+              <li><a href="{{ route('course') }}">Course</a>
               </li>
-              <li><a href="#">Study Abroad</a>
+              <li><a href="{{ route('study-abroad') }}">Study Abroad</a>
               </li>
-              <li><a href="#home">Blog</a>
+              <li><a href="{{ route('blog') }}">Blog</a>
               </li>
               <li><a href="#">Get In Touch</a>
                 <ul class="dropdown">
-                  <li><a href="#">About</a>
+                  <li><a href="{{ route('about') }}">About</a>
                   </li>
-                   <li><a href="#">Contact</a>
+                   <li><a href="{{ route('contact') }}">Contact</a>
                   </li>
                 </ul>
               </li>

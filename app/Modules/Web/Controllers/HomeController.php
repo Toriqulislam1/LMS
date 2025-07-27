@@ -1,54 +1,60 @@
 <?php
-
 namespace App\Modules\Web\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Modules\Web\Repositories\FrontHomeRepositoryInterface;
 
 class HomeController extends Controller
 {
+    protected $frontHomeRepo;
+    public function __construct(FrontHomeRepositoryInterface $frontHomeRepo)
+    {
+        $this->frontHomeRepo = $frontHomeRepo;
+    }
+
     public function home()
     {
-        return view('web.home');
+        return $this->frontHomeRepo->home();
     }
     public function about()
     {
-        return view('web.about');
+        return $this->frontHomeRepo->about();
     }
     public function contact()
     {
-        return view('web.contact');
+        return $this->frontHomeRepo->contact();
     }
     public function course()
     {
-        return view('web.course');
+        return $this->frontHomeRepo->course();
     }
     public function blog()
     {
-        return view('web.blog');
+        return $this->frontHomeRepo->blog();
     }
     public function blogPost($slug)
     {
-        return view('web.blog-post', ['slug' => $slug]);
+        return $this->frontHomeRepo->blogPost($slug);
     }
     public function shop()
     {
-        return view('web.shop');
+        return $this->frontHomeRepo->shop();
     }
     public function terms()
     {
-        return view('web.terms');
+        return $this->frontHomeRepo->terms();
     }
     public function privacy()
     {
-        return view('web.privacy');
+        return $this->frontHomeRepo->privacy();
     }
-    public function sitemap()
-    {
-        return view('web.sitemap');
-    }
-    public function error404()
-    {
-        return view('web.error404');
-    }
+    // public function sitemap()
+    // {
+    //     return $this->frontHomeRepo->sitemap();
+    // }
+    // public function error404()
+    // {
+    //     return $this->frontHomeRepo->error404();
+    // }
 }

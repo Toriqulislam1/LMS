@@ -1,0 +1,18 @@
+<?php
+namespace App\Modules\Web\Repositories;
+
+interface FrontHomeRepositoryInterface
+{
+    public function home();
+    public function about();
+    public function contact();
+    public function course();
+    public function blog();
+    public function blogPost($slug);
+    public function shop();
+    public function terms();
+    public function privacy();
+    // public function sitemap();
+    // public function error404();
+}
+
