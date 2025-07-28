@@ -6,7 +6,6 @@ use App\Modules\provider\course\Repositories\CourseRepositoryInterface;
 use App\Models\Course;
 use Illuminate\Support\Collection;
 
-
 class CourseRepository implements CourseRepositoryInterface
 {
      public function all(): Collection
@@ -17,7 +16,7 @@ class CourseRepository implements CourseRepositoryInterface
     {
         return Course::where('status', 1)
             ->orderBy('created_at', 'desc')
-            ->get(['id', 'title', 'sub_title','price', 'slug']);
+            ->get(['id', 'title', 'sub_title','price', 'slug','start_date','discount']);
     }
 
     public function find(int $id): ?Course

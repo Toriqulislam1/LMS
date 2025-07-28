@@ -1,5 +1,4 @@
 @extends('web.master')
-@section('title', 'Course Details')
 @section('content')
 
   <!-- Start main-content -->

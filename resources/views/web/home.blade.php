@@ -640,126 +640,28 @@
         <div class="row multi-row-clearfix">
           <div class="col-md-12">
             <div class="owl-carousel-3col owl-nav-top" data-dots="true">
+            @foreach($courses as $course)
               <div class="item">
                 <div class="project mb-30 border-2px">
                   <div class="thumb">
-                    <img class="img-fullwidth" alt="" src="{{asset('frontend')}}/images/project/p1.jpg">
+                    <img class="img-fullwidth" alt="" src="{{ $course->getFirstMediaUrl('thumbnail_course') }}">
                     <div class="hover-link">
-                      <a class="btn btn-flat btn-dark btn-theme-colored btn-md pull-left font-20" href="#"><span>$500</span> </a>
+                      <a class="btn btn-flat btn-dark btn-theme-colored btn-md pull-left font-20" href="{{ route('course-detail', ['slug' => $course->slug, 'id' => $course->id]) }}"><span>{{$course->price}}</span> </a>
                     </div>
                   </div>
                   <div class="project-details p-15 pt-10 pb-10">
-                    <h5 class="font-14 font-weight-500 mb-5">Subtitle place here</h5>
-                    <h4 class="font-weight-700 text-uppercase mt-0"><a href="page-courses-accounting-technologies.html">Course Title Here</a></h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam interdum diam tortor, egestas varius erat aliquam. </p>
+                    <h5 class="font-14 font-weight-500 mb-5">{{$course->sub_title}} </h5>
+                    <h4 class="font-weight-700 text-uppercase mt-0"><a href="{{ route('course-detail', ['slug' => $course->slug, 'id' => $course->id]) }}">{{$course->title}}</a></h4>
+                    <p>{{$course->short_description}}</p>
                     <ul class="list-inline project-conditions text-center m-0 p-10">
-                      <li class="current-fund"><strong>Time</strong> June 26</li>
-                      <li class="target-fund"><strong>Discount</strong>15%</li>
-                      <li class="remaining-days"><strong>Duration</strong>6 Months</li>
+                      <li class="current-fund"><strong>Time</strong> {{$course->start_time}}</li>
+                      <li class="target-fund"><strong>Discount</strong>{{$course->discount}}</li>
+                      <li class="remaining-days"><strong>Duration</strong>{{$course->duration_month}} Months</li>
                     </ul>
                   </div>
                 </div>
               </div>
-              <div class="item">
-                <div class="project mb-30 border-2px">
-                  <div class="thumb">
-                    <img class="img-fullwidth" alt="" src="{{asset('frontend')}}/images/project/p2.jpg">
-                    <div class="hover-link">
-                      <a class="btn btn-flat btn-dark btn-theme-colored btn-md pull-left font-20" href="#"><span>$500</span> </a>
-                    </div>
-                  </div>
-                  <div class="project-details p-15 pt-10 pb-10">
-                    <h5 class="font-14 font-weight-500 mb-5">Subtitle place here</h5>
-                    <h4 class="font-weight-700 text-uppercase mt-0"><a href="page-courses-accounting-technologies.html">Course Title Here</a></h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam interdum diam tortor, egestas varius erat aliquam. </p>
-                    <ul class="list-inline project-conditions text-center m-0 p-10">
-                      <li class="current-fund"><strong>Time</strong> June 26</li>
-                      <li class="target-fund"><strong>Discount</strong>15%</li>
-                      <li class="remaining-days"><strong>Duration</strong>6 Months</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="project mb-30 border-2px">
-                  <div class="thumb">
-                    <img class="img-fullwidth" alt="" src="{{asset('frontend')}}/images/project/p3.jpg">
-                    <div class="hover-link">
-                      <a class="btn btn-flat btn-dark btn-theme-colored btn-md pull-left font-20" href="#"><span>$500</span> </a>
-                    </div>
-                  </div>
-                  <div class="project-details p-15 pt-10 pb-10">
-                    <h5 class="font-14 font-weight-500 mb-5">Subtitle place here</h5>
-                    <h4 class="font-weight-700 text-uppercase mt-0"><a href="page-courses-accounting-technologies.html">Course Title Here</a></h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam interdum diam tortor, egestas varius erat aliquam. </p>
-                    <ul class="list-inline project-conditions text-center m-0 p-10">
-                      <li class="current-fund"><strong>Time</strong> June 26</li>
-                      <li class="target-fund"><strong>Discount</strong>15%</li>
-                      <li class="remaining-days"><strong>Duration</strong>6 Months</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="project mb-30 border-2px">
-                  <div class="thumb">
-                    <img class="img-fullwidth" alt="" src="{{asset('frontend')}}/images/project/p4.jpg">
-                    <div class="hover-link">
-                      <a class="btn btn-flat btn-dark btn-theme-colored btn-md pull-left font-20" href="#"><span>$500</span> </a>
-                    </div>
-                  </div>
-                  <div class="project-details p-15 pt-10 pb-10">
-                    <h5 class="font-14 font-weight-500 mb-5">Subtitle place here</h5>
-                    <h4 class="font-weight-700 text-uppercase mt-0"><a href="page-courses-accounting-technologies.html">Course Title Here</a></h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam interdum diam tortor, egestas varius erat aliquam. </p>
-                    <ul class="list-inline project-conditions text-center m-0 p-10">
-                      <li class="current-fund"><strong>Time</strong> June 26</li>
-                      <li class="target-fund"><strong>Discount</strong>15%</li>
-                      <li class="remaining-days"><strong>Duration</strong>6 Months</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="project mb-30 border-2px">
-                  <div class="thumb">
-                    <img class="img-fullwidth" alt="" src="{{asset('frontend')}}/images/project/p5.jpg">
-                    <div class="hover-link">
-                      <a class="btn btn-flat btn-dark btn-theme-colored btn-md pull-left font-20" href="#"><span>$500</span> </a>
-                    </div>
-                  </div>
-                  <div class="project-details p-15 pt-10 pb-10">
-                    <h5 class="font-14 font-weight-500 mb-5">Subtitle place here</h5>
-                    <h4 class="font-weight-700 text-uppercase mt-0"><a href="page-courses-accounting-technologies.html">Course Title Here</a></h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam interdum diam tortor, egestas varius erat aliquam. </p>
-                    <ul class="list-inline project-conditions text-center m-0 p-10">
-                      <li class="current-fund"><strong>Time</strong> June 26</li>
-                      <li class="target-fund"><strong>Discount</strong>15%</li>
-                      <li class="remaining-days"><strong>Duration</strong>6 Months</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-              <div class="item">
-                <div class="project mb-30 border-2px">
-                  <div class="thumb">
-                    <img class="img-fullwidth" alt="" src="{{asset('frontend')}}/images/project/p6.jpg">
-                    <div class="hover-link">
-                      <a class="btn btn-flat btn-dark btn-theme-colored btn-md pull-left font-20" href="#"><span>$500</span> </a>
-                    </div>
-                  </div>
-                  <div class="project-details p-15 pt-10 pb-10">
-                    <h5 class="font-14 font-weight-500 mb-5">Subtitle place here</h5>
-                    <h4 class="font-weight-700 text-uppercase mt-0"><a href="page-courses-accounting-technologies.html">Course Title Here</a></h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam interdum diam tortor, egestas varius erat aliquam. </p>
-                    <ul class="list-inline project-conditions text-center m-0 p-10">
-                      <li class="current-fund"><strong>Time</strong> June 26</li>
-                      <li class="target-fund"><strong>Discount</strong>15%</li>
-                      <li class="remaining-days"><strong>Duration</strong>6 Months</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
+            @endforeach
             </div>
           </div>
         </div>

@@ -18,7 +18,8 @@ class FrontHomeRepository implements FrontHomeRepositoryInterface{
     public function home() {
         $pageTitle = 'Home';
         $generalSettings = $this->generalSettings();
-        return view('web.home', compact('generalSettings', 'pageTitle'));
+        $courses = $this->courseRepository->frontendGetCourses();
+        return view('web.home', compact('generalSettings', 'pageTitle', 'courses'));
     }
     public function about() {
         $pageTitle = 'About Us';
