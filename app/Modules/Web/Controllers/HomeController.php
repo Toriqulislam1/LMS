@@ -30,9 +30,9 @@ class HomeController extends Controller
     {
         return $this->frontHomeRepo->course();
     }
-    public function courseDetail($id)
+    public function courseDetail(string $id)
     {
-        return $this->frontHomeRepo->courseDetail($id);
+        return $this->frontHomeRepo->courseDetail((int)$id);
     }
     public function blog()
     {

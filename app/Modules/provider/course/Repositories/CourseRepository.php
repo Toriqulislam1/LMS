@@ -31,6 +31,9 @@ class CourseRepository implements CourseRepositoryInterface
         if ($data['thumbnail_course']) {
             $course->addMedia($data['thumbnail_course'])->toMediaCollection('thumbnail_course');
         }
+        if ($data['feature_course']) {
+            $course->addMedia($data['feature_course'])->toMediaCollection('feature_course');
+        }
         return $course;
     }
 
