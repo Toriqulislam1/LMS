@@ -11,7 +11,7 @@
 
 
 <!-- Page Title -->
-<title>{{ $generalSettings['settings']['website_name']}}</title>
+<title>{{ $generalSettings['settings']['website_name']}}|{{ $pageTitle }}</title>
 
 <!-- Favicon and Touch Icons -->
 <link href="{{ $generalSettings['favicon'] }}" rel="shortcut icon" type="image/png">

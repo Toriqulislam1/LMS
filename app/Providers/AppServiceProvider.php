@@ -31,6 +31,11 @@ class AppServiceProvider extends ServiceProvider
         $this->app->bind(\App\Modules\provider\blog\Repositories\BlogRepositoryInterface::class, \App\Modules\provider\blog\Repositories\BlogRepository::class);
         $this->app->bind(\App\Modules\provider\shop\Repositories\ShopRepositoryInterface::class, \App\Modules\provider\shop\Repositories\ShopRepository::class);
         $this->app->bind(\App\Modules\Web\Repositories\FrontHomeRepositoryInterface::class, \App\Modules\Web\Repositories\FrontHomeRepository::class);
+        
+        $this->app->bind(
+            \App\Modules\Provider\course\Repositories\CourseRepositoryInterface::class,
+            \App\Modules\Provider\course\Repositories\CourseRepository::class
+        );
 
     }
 

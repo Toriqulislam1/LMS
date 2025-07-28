@@ -13,6 +13,12 @@ class CourseRepository implements CourseRepositoryInterface
     {
         return Course::all();
     }
+    public function frontendGetCourses(): Collection
+    {
+        return Course::where('status', 1)
+            ->orderBy('created_at', 'desc')
+            ->get(['id', 'title', 'sub_title','price', 'slug']);
+    }
 
     public function find(int $id): ?Course
     {

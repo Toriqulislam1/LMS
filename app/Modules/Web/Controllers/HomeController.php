@@ -4,13 +4,14 @@ namespace App\Modules\Web\Controllers;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Modules\Web\Repositories\FrontHomeRepositoryInterface;
+use App\Modules\provider\course\Repositories\CourseRepositoryInterface;
 
 class HomeController extends Controller
 {
     protected $frontHomeRepo;
     public function __construct(FrontHomeRepositoryInterface $frontHomeRepo)
     {
-        $this->frontHomeRepo = $frontHomeRepo;
+        $this->frontHomeRepo = $frontHomeRepo; 
     }
 
     public function home()
@@ -28,6 +29,10 @@ class HomeController extends Controller
     public function course()
     {
         return $this->frontHomeRepo->course();
+    }
+    public function courseDetail($id)
+    {
+        return $this->frontHomeRepo->courseDetail($id);
     }
     public function blog()
     {
