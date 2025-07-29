@@ -654,7 +654,7 @@
                     <h4 class="font-weight-700 text-uppercase mt-0"><a href="{{ route('course-detail', ['slug' => $course->slug, 'id' => $course->id]) }}">{{$course->title}}</a></h4>
                     <p>{{$course->short_description}}</p>
                     <ul class="list-inline project-conditions text-center m-0 p-10">
-                      <li class="current-fund"><strong>Time</strong> {{$course->start_time}}</li>
+                      <li class="current-fund"><strong>Time</strong> {{$course->start_date}}</li>
                       <li class="target-fund"><strong>Discount</strong>{{$course->discount}}</li>
                       <li class="remaining-days"><strong>Duration</strong>{{$course->duration_month}} Months</li>
                     </ul>

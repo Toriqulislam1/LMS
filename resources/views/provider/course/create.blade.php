@@ -39,9 +39,9 @@
                         <!-- Title -->
                         <div>
                         <label class="mb-1.5 block text-sm font-medium text-gray-800 dark:text-gray-800">
-                            Title
+                            Title <span class="text-red-500">*</span>
                         </label>
-                        <input type="text" name="title" placeholder="Enter Your Course Title"
+                        <input type="text" name="title" placeholder="Enter Your Course Title" required
                             class="h-11 w-full rounded-lg border border-gray-300 bg-white px-4 py-2.5 text-sm shadow-theme-xs focus:border-brand-300 focus:outline-hidden focus:ring-3 focus:ring-brand-500/10 dark:border-gray-600 dark:text-gray-900 dark:placeholder:text-gray-500" />
                         </div>
 
@@ -57,9 +57,18 @@
                         <!-- Thumbnail -->
                         <div>
                             <label class="mb-1.5 block text-sm font-medium text-gray-700 dark:text-gray-700">
-                                Thumbnail
+                                Thumbnail Image(size:370*285px;accepted:jpg,png,jpeg) <span class="text-red-500">*</span>
                             </label>
-                            <input type="file" name="thumbnail_course"
+                            <input type="file" name="thumbnail_course" required accept=".jpg,.jpeg,.png"
+                                class="h-11 w-full rounded-lg border border-gray-300 bg-white dark:bg-white px-4 py-2.5 text-sm shadow-theme-xs focus:border-brand-300 focus:outline-hidden focus:ring-3 focus:ring-brand-500/10 dark:border-gray-300 dark:text-gray-900 dark:placeholder:text-gray-500" />
+                        </div>
+
+                        <!-- Feature Image -->
+                        <div>
+                            <label class="mb-1.5 block text-sm font-medium text-gray-700 dark:text-gray-700">
+                                Feature Image (size:750*500px;accepted:jpg,png,jpeg) <span class="text-red-500">*</span>
+                            </label>
+                            <input type="file" name="feature_course" accept=".jpg,.jpeg,.png"
                                 class="h-11 w-full rounded-lg border border-gray-300 bg-white dark:bg-white px-4 py-2.5 text-sm shadow-theme-xs focus:border-brand-300 focus:outline-hidden focus:ring-3 focus:ring-brand-500/10 dark:border-gray-300 dark:text-gray-900 dark:placeholder:text-gray-500" />
                         </div>
 
@@ -68,7 +77,7 @@
                             <label class="mb-1.5 block text-sm font-medium text-gray-700 dark:text-gray-700">
                                 Course Price
                             </label>
-                            <input type="text" name="price" placeholder="Enter Your Course Price"
+                            <input type="number" name="price" value="0" placeholder="Enter Your Course Price"
                                 class="h-11 w-full rounded-lg border border-gray-300 bg-white dark:bg-white px-4 py-2.5 text-sm shadow-theme-xs focus:border-brand-300 focus:outline-hidden focus:ring-3 focus:ring-brand-500/10 dark:border-gray-300 dark:text-gray-900 dark:placeholder:text-gray-500" />
                         </div>
 
@@ -77,7 +86,7 @@
                             <label class="mb-1.5 block text-sm font-medium text-gray-700 dark:text-gray-700">
                                 Course Discount
                             </label>
-                            <input type="text" name="discount" placeholder="Enter Your Course Discount"
+                            <input type="number" name="discount" value="0" placeholder="Enter Your Course Discount"
                                 class="h-11 w-full rounded-lg border border-gray-300 bg-white dark:bg-white px-4 py-2.5 text-sm shadow-theme-xs focus:border-brand-300 focus:outline-hidden focus:ring-3 focus:ring-brand-500/10 dark:border-gray-300 dark:text-gray-900 dark:placeholder:text-gray-500" />
                         </div>
 
@@ -104,7 +113,7 @@
                             <label class="mb-1.5 block text-sm font-medium text-gray-700 dark:text-gray-700">
                                 Course Duration
                             </label>
-                            <input type="text" name="duration_month" placeholder="Enter Your Duration Month"
+                            <input type="number" name="duration_month" placeholder="Enter Your Duration Month"
                                 class="h-11 w-full rounded-lg border border-gray-300 bg-white dark:bg-white px-4 py-2.5 text-sm shadow-theme-xs focus:border-brand-300 focus:outline-hidden focus:ring-3 focus:ring-brand-500/10 dark:border-gray-300 dark:text-gray-900 dark:placeholder:text-gray-500" />
                         </div>
 
@@ -129,7 +138,7 @@
                         <!-- Action Buttons -->
                         <div class="flex justify-start gap-4 mt-6 px-5 sm:px-6 pb-6">
                             <!-- Back Button -->
-                            <a href=""
+                            <a href="{{ route('courses.index') }}"
                                 class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-700 bg-gray-200 rounded-lg hover:bg-gray-300 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600">
                                 ← Back
                             </a>

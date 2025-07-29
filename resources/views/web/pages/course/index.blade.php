@@ -37,10 +37,10 @@
                       <a class="btn btn-flat btn-dark btn-theme-colored btn-md pull-left font-20" href="{{ route('course-detail', ['slug' => $course->slug, 'id' => $course->id]) }}"><span>{{$course->price}}</span> </a>
                       </div>
                     </div>
-                  <div class="project-details p-15 pt-10 pb-10">
-                    <h5 class="font-14 font-weight-500 mb-5">{{ $course->sub_title }}</h5>
-                    <h4 class="font-weight-700 text-uppercase mt-0"><a href="{{ route('course-detail', ['slug' => $course->slug, 'id' => $course->id]) }}">
-    {{ $course->title }}"</a></h4>
+                    <div class="project-details p-15 pt-10 pb-10">
+                        <h5 class="font-14 font-weight-500 mb-5">{{ $course->sub_title }}</h5>
+                        <h4 class="font-weight-700 text-uppercase mt-0"><a href="{{ route('course-detail', ['slug' => $course->slug, 'id' => $course->id]) }}">
+                        {{ $course->title }}"</a></h4>
                     </div>
                   </div>
                 </div>

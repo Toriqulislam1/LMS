@@ -38,7 +38,7 @@ class FrontHomeRepository implements FrontHomeRepositoryInterface{
 
         return view('web.pages.course.index', compact('generalSettings', 'courses', 'pageTitle'));
     }
-    public function courseDetail(int $id) {
+    public function courseDetail($slug,$id) {
         $pageTitle = 'Course Detail';
         $course = $this->courseRepository->find($id);
         $generalSettings = $this->generalSettings();

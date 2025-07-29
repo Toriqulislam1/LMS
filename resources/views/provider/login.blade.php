@@ -259,7 +259,7 @@
                     <!-- Button -->
                     <div>
                       <button
-                        class="flex items-center justify-center w-full px-4 py-3 text-sm font-medium text-white transition rounded-lg bg-brand-500 shadow-theme-xs hover:bg-brand-600"
+                        class="flex items-center justify-center w-full px-4 py-3 text-sm bg-amber-400 font-medium text-dark transition rounded-lg bg-brand-500 shadow-theme-xs hover:bg-brand-600"
                       >
                         Sign In
                       </button>

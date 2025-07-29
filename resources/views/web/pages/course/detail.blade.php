@@ -32,7 +32,7 @@
               <h3 class="text-theme-colored">{{ $course->title }}</h3>
               <h5><em>{{ $course->sub_title }}</em></h5>
               <p>{{ $course->short_description }}</p>
-              <p>{{ $course->description }}</p>
+              <p>{!! $course->description !!}</p>
             </div>
           </div>
         </div>

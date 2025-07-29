@@ -11,7 +11,7 @@ class HomeController extends Controller
     protected $frontHomeRepo;
     public function __construct(FrontHomeRepositoryInterface $frontHomeRepo)
     {
-        $this->frontHomeRepo = $frontHomeRepo; 
+        $this->frontHomeRepo = $frontHomeRepo;
     }
 
     public function home()
@@ -30,9 +30,9 @@ class HomeController extends Controller
     {
         return $this->frontHomeRepo->course();
     }
-    public function courseDetail(string $id)
+    public function courseDetail($slug,$id)
     {
-        return $this->frontHomeRepo->courseDetail((int)$id);
+        return $this->frontHomeRepo->courseDetail($slug,(int)$id);
     }
     public function blog()
     {
