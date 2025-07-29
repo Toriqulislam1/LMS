@@ -10,7 +10,7 @@ Route::group([],function () {
     Route::get('/dashboard', [AuthController::class, 'dashboard'])->name('admin-dashboard');
 
 
-    Route::middleware('auth:sanctum')->group(function () {
-        Route::post('/logout', [AuthController::class, 'logout']);
+    Route::middleware('auth:admin')->group(function () {
+        Route::get('/logout', [AuthController::class, 'logout'])->name('admin-logout');
     });
 });

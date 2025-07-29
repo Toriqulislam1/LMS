@@ -1,8 +1,11 @@
-
 <?php
 namespace App\Modules\provider\auth\Repositories;
 
 use App\Modules\provider\auth\Repositories\AdminRepositoryInterface;
+use App\Models\GeneralSetting;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Http\Request;
 
 use App\Models\Admin;
 
@@ -35,4 +38,21 @@ class AdminRepository implements AdminRepositoryInterface
     // {
     //     return Admin::destroy($id);
     // }
+
+
+
+
+    public function generalSettings() {
+
+        $settings = GeneralSetting::all()->pluck('value', 'key');
+        $media = GeneralSetting::where('key', 'media')->first();
+        return [
+            'settings' => $settings,
+            'logo' => $media?->getFirstMediaUrl('website_logo'),
+            'favicon' => $media?->getFirstMediaUrl('website_favicon'),
+        ];
+    }
+
+
+
 }

@@ -9,11 +9,11 @@ class AuthController extends Controller
 {
        protected $adminRepo;
 
-    // public function __construct(AdminRepositoryInterface $adminRepo)
-    // {
-    //     $this->middleware('auth:admin');
-    //     $this->adminRepo = $adminRepo;
-    // }
+    public function __construct(AdminRepositoryInterface $adminRepo)
+    {
+        $this->middleware('auth:admin');
+        $this->adminRepo = $adminRepo;
+    }
 
     public function login()
     {
@@ -35,12 +35,18 @@ class AuthController extends Controller
 
     public function dashboard()
     {
-        return view('provider.home');
+        $generalSettings = $this->adminRepo->generalSettings();
+        return view('provider.home', compact('generalSettings'));
+
     }
 
-    public function index()
+
+    public function logout(Request $request)
     {
-        $admins = $this->adminRepo->all();
-        return view('admin.admins.index', compact('admins'));
+        Auth::guard('admin')->logout();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+
+        return redirect()->route('provider-login');
     }
 }
