@@ -57,9 +57,35 @@
                         <!-- Thumbnail -->
                         <div>
                             <label class="mb-1.5 block text-sm font-medium text-gray-700 dark:text-gray-700">
-                                Thumbnail
+                                Thumbnail (size:285*300px;accepted:jpg,png,jpeg )
                             </label>
                             <input type="file" name="thumbnail_shop" accept=".jpg,.jpeg,.png"
+                                class="h-11 w-full rounded-lg border border-gray-300 bg-white dark:bg-white px-4 py-2.5 text-sm shadow-theme-xs focus:border-brand-300 focus:outline-hidden focus:ring-3 focus:ring-brand-500/10 dark:border-gray-300 dark:text-gray-900 dark:placeholder:text-gray-500" />
+                        </div>
+                        <!-- Feature Image -->
+                        <div>
+                            <label class="mb-1.5 block text-sm font-medium text-gray-700 dark:text-gray-700">
+                                Feature Image (size:460*460;accepted:jpg,png,jpeg) 
+                            </label>
+                            <input type="file" name="feature_course" accept=".jpg,.jpeg,.png"
+                                class="h-11 w-full rounded-lg border border-gray-300 bg-white dark:bg-white px-4 py-2.5 text-sm shadow-theme-xs focus:border-brand-300 focus:outline-hidden focus:ring-3 focus:ring-brand-500/10 dark:border-gray-300 dark:text-gray-900 dark:placeholder:text-gray-500" />
+                        </div>
+
+                        <!-- Course price -->
+                        <div>
+                            <label class="mb-1.5 block text-sm font-medium text-gray-700 dark:text-gray-700">
+                                Course Price
+                            </label>
+                            <input type="number" name="price" value="0" placeholder="Enter Your Course Price"
+                                class="h-11 w-full rounded-lg border border-gray-300 bg-white dark:bg-white px-4 py-2.5 text-sm shadow-theme-xs focus:border-brand-300 focus:outline-hidden focus:ring-3 focus:ring-brand-500/10 dark:border-gray-300 dark:text-gray-900 dark:placeholder:text-gray-500" />
+                        </div>
+
+                        <!-- Course Discount -->
+                        <div>
+                            <label class="mb-1.5 block text-sm font-medium text-gray-700 dark:text-gray-700">
+                                Course Discount
+                            </label>
+                            <input type="number" name="discount_price" value="0" placeholder="Enter Your Course Discount"
                                 class="h-11 w-full rounded-lg border border-gray-300 bg-white dark:bg-white px-4 py-2.5 text-sm shadow-theme-xs focus:border-brand-300 focus:outline-hidden focus:ring-3 focus:ring-brand-500/10 dark:border-gray-300 dark:text-gray-900 dark:placeholder:text-gray-500" />
                         </div>
 
