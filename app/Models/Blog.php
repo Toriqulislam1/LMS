@@ -13,8 +13,9 @@ class Blog extends Model implements HasMedia
     protected $fillable = [
         'title',
         'sub_title',
-        'thumbnail',
         'description',
+        'slug',
+        'published_at',
     ];
 
     public function getThumbnailUrlAttribute()

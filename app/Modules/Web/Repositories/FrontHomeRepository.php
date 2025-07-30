@@ -2,6 +2,7 @@
 namespace App\Modules\Web\Repositories;
 
 use App\Models\GeneralSetting;
+use App\Modules\provider\blog\Repositories\BlogRepositoryInterface;
 use App\Modules\Web\Repositories\FrontHomeRepositoryInterface;
 use App\Modules\Provider\course\Repositories\CourseRepositoryInterface;
 
@@ -9,10 +10,12 @@ use App\Modules\Provider\course\Repositories\CourseRepositoryInterface;
 class FrontHomeRepository implements FrontHomeRepositoryInterface{
 
     protected $courseRepository;
-
-    public function __construct(CourseRepositoryInterface $courseRepository)
+    protected $blogRepository;
+    
+    public function __construct(CourseRepositoryInterface $courseRepository,BlogRepositoryInterface $blogRepository)
     {
         $this->courseRepository = $courseRepository;
+        $this->blogRepository = $blogRepository;
     }
 
     public function home() {
@@ -47,12 +50,14 @@ class FrontHomeRepository implements FrontHomeRepositoryInterface{
     public function blog() {
         $pageTitle = 'Blog';
         $generalSettings = $this->generalSettings();
-        return view('web.pages.blog.index', compact('generalSettings', 'pageTitle'));
+        $blogs = $this->blogRepository->frontGetAllBlogs();
+        return view('web.pages.blog.index', compact('generalSettings', 'pageTitle', 'blogs'));
     }
-    public function blogPost($slug) {
+    public function blogPost($slug, $id) {
         $pageTitle = 'Blog Post';
         $generalSettings = $this->generalSettings();
-        return view('web.pages.blog-post', compact('generalSettings', 'slug', 'pageTitle'));
+        $blog = $this->blogRepository->find($id);
+        return view('web.pages.blog.details', compact('generalSettings', 'slug', 'pageTitle', 'blog'));
     }
     public function shop() {
         $pageTitle = 'Shop';
@@ -79,6 +84,12 @@ class FrontHomeRepository implements FrontHomeRepositoryInterface{
             'favicon' => $media?->getFirstMediaUrl('website_favicon'),
         ];
     }
+    public function studyAbroad() {
+        $pageTitle = 'Study Abroad';
+        $generalSettings = $this->generalSettings();
+        return view('web.pages.studyAbroad.index', compact('generalSettings', 'pageTitle'));
+    }
+    
     // public function sitemap() {
     //     return view('web.sitemap');
     // }

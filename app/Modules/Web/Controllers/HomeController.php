@@ -38,9 +38,9 @@ class HomeController extends Controller
     {
         return $this->frontHomeRepo->blog();
     }
-    public function blogPost($slug)
+    public function blogPost($slug, $id)
     {
-        return $this->frontHomeRepo->blogPost($slug);
+        return $this->frontHomeRepo->blogPost($slug, (int)$id);
     }
     public function shop()
     {
@@ -53,6 +53,10 @@ class HomeController extends Controller
     public function privacy()
     {
         return $this->frontHomeRepo->privacy();
+    }
+    public function studyAbroad()
+    {
+        return $this->frontHomeRepo->studyAbroad();
     }
     // public function sitemap()
     // {

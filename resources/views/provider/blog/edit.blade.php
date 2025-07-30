@@ -40,9 +40,9 @@
                         <!-- Title -->
                         <div>
                         <label class="mb-1.5 block text-sm font-medium text-gray-800 dark:text-gray-800">
-                            Title
+                            Title <span class="text-red-500">*</span>
                         </label>
-                        <input type="text" name="title" placeholder="Enter Your Blog Title" value="{{ $blog->title }}"
+                        <input type="text" name="title" required placeholder="Enter Your Blog Title" value="{{ $blog->title }}"
                             class="h-11 w-full  rounded-lg border border-gray-300 bg-white px-4 py-2.5 text-sm shadow-theme-xs focus:border-brand-300 focus:outline-hidden focus:ring-3 focus:ring-brand-500/10 dark:border-gray-600 dark:text-gray-900 dark:placeholder:text-gray-500" />
                         </div>
 
@@ -58,9 +58,17 @@
                         <!-- Thumbnail -->
                         <div>
                             <label class="mb-1.5 block text-sm font-medium text-gray-700 dark:text-gray-700">
-                                Thumbnail
+                                Thumbnail <span class="text-red-500">*</span>  (size:370x247px) accepted formats: .jpg, .jpeg, .png
                             </label>
-                            <input type="file" name="thumbnail_course"
+                            <input type="file" name="thumbnail_blog" required accept=".jpg,.jpeg,.png"
+                                class="h-11 w-full rounded-lg border border-gray-300 bg-white dark:bg-white px-4 py-2.5 text-sm shadow-theme-xs focus:border-brand-300 focus:outline-hidden focus:ring-3 focus:ring-brand-500/10 dark:border-gray-300 dark:text-gray-900 dark:placeholder:text-gray-500" />
+                        </div>
+                        <!-- Feature Image -->
+                        <div>
+                            <label class="mb-1.5 block text-sm font-medium text-gray-700 dark:text-gray-700">
+                                Feature Image(size:1920X1280px) accepted:jpg,jpeg,png
+                            </label>
+                            <input type="file" name="feature_blog" accept=".jpg,.jpeg,.png"
                                 class="h-11 w-full rounded-lg border border-gray-300 bg-white dark:bg-white px-4 py-2.5 text-sm shadow-theme-xs focus:border-brand-300 focus:outline-hidden focus:ring-3 focus:ring-brand-500/10 dark:border-gray-300 dark:text-gray-900 dark:placeholder:text-gray-500" />
                         </div>
 

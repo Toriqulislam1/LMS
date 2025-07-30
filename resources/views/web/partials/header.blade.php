@@ -35,7 +35,7 @@
       <div class="header-nav-wrapper navbar-scrolltofixed bg-white">
         <div class="container">
           <nav id="menuzord-right" class="menuzord default">
-            <a class="menuzord-brand pull-left flip" href="javascript:void(0)">
+            <a class="menuzord-brand pull-left flip" href="{{route('home') }}">
               <img src="{{ $generalSettings['logo'] }}" alt="">
             </a>
             <ul class="menuzord-menu">

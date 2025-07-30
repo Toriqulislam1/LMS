@@ -15,10 +15,11 @@ class BlogRequest extends FormRequest
     public function rules(): array
     {
         return [
-            // 'title'             => 'required|string|max:100',
-            // 'sub_title'         => 'nullable|string|max:100',
-            // 'thumbnail'         => 'required|image|mimes:jpg,jpeg,png|max:2048', // max 2MB
-            // 'description'       => 'nullable|string',
+            'title'             => 'required|string|max:200',
+            'sub_title'         => 'nullable|string|max:100',
+            'thumbnail_blog'         => 'required|image|mimes:jpg,jpeg,png|max:2048', // max 2MB
+            'feature_blog'         => 'nullable|image|mimes:jpg,jpeg,png|max:2048', // max 2MB
+            'description'       => 'nullable|string',
         ];
     }
 
