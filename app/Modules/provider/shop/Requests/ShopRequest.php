@@ -25,7 +25,7 @@ class ShopRequest extends FormRequest
     public function messages(): array
     {
         return [
-            'title.required'     => 'Blog title is required.',
+            'name.required'     => 'Shop name is required.',
             'thumbnail.required' => 'Thumbnail image is required.',
             'thumbnail.image'    => 'Thumbnail must be an image.',
             'thumbnail.mimes'    => 'Only jpg, jpeg, png formats are allowed.',

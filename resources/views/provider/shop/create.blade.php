@@ -39,7 +39,7 @@
                         <!-- Name -->
                         <div>
                         <label class="mb-1.5 block text-sm font-medium text-gray-800 dark:text-gray-800">
-                            Name
+                            Name <span class="text-red-500">*</span>
                         </label>
                         <input type="text" name="name" placeholder="Enter Your Shop Name"
                             class="h-11 w-full rounded-lg border border-gray-300 bg-white px-4 py-2.5 text-sm shadow-theme-xs focus:border-brand-300 focus:outline-hidden focus:ring-3 focus:ring-brand-500/10 dark:border-gray-600 dark:text-gray-900 dark:placeholder:text-gray-500" />
@@ -57,7 +57,7 @@
                         <!-- Thumbnail -->
                         <div>
                             <label class="mb-1.5 block text-sm font-medium text-gray-700 dark:text-gray-700">
-                                Thumbnail (size:285*300px;accepted:jpg,png,jpeg )
+                                Thumbnail <span class="text-red-500">*</span> (size:285*300px;accepted:jpg,png,jpeg )
                             </label>
                             <input type="file" name="thumbnail_shop" accept=".jpg,.jpeg,.png"
                                 class="h-11 w-full rounded-lg border border-gray-300 bg-white dark:bg-white px-4 py-2.5 text-sm shadow-theme-xs focus:border-brand-300 focus:outline-hidden focus:ring-3 focus:ring-brand-500/10 dark:border-gray-300 dark:text-gray-900 dark:placeholder:text-gray-500" />
@@ -65,9 +65,9 @@
                         <!-- Feature Image -->
                         <div>
                             <label class="mb-1.5 block text-sm font-medium text-gray-700 dark:text-gray-700">
-                                Feature Image (size:460*460;accepted:jpg,png,jpeg) 
+                                Feature Image (size:460*460;accepted:jpg,png,jpeg)
                             </label>
-                            <input type="file" name="feature_course" accept=".jpg,.jpeg,.png"
+                            <input type="file" name="feature_shop" accept=".jpg,.jpeg,.png"
                                 class="h-11 w-full rounded-lg border border-gray-300 bg-white dark:bg-white px-4 py-2.5 text-sm shadow-theme-xs focus:border-brand-300 focus:outline-hidden focus:ring-3 focus:ring-brand-500/10 dark:border-gray-300 dark:text-gray-900 dark:placeholder:text-gray-500" />
                         </div>
 

@@ -5,6 +5,8 @@ use App\Modules\provider\shop\Repositories\ShopRepositoryInterface;
 
 use App\Models\Shop;
 use Illuminate\Support\Collection;
+use Illuminate\Http\UploadedFile;
+use Illuminate\Support\Str;
 
 
 class ShopRepository implements ShopRepositoryInterface
@@ -19,14 +21,33 @@ class ShopRepository implements ShopRepositoryInterface
         return Shop::find($id);
     }
 
-    public function create(array $data): Shop
-    {
-        $shop = Shop::create($data);
-        if ($data['thumbnail_shop']) {
-            $shop->addMedia($data['thumbnail_shop'])->toMediaCollection('thumbnail_shop');
-        }
-        return $shop;
+
+public function create(array $data): Shop
+{
+    // Generate slug
+    $data['slug'] = Str::slug($data['name']);
+
+    // Extract files before creating
+    $thumbnail = $data['thumbnail_shop'] ?? null;
+    $feature = $data['feature_shop'] ?? null;
+
+    unset($data['thumbnail_shop'], $data['feature_shop']); // remove files from insertable data
+
+    // Create shop
+    $shop = Shop::create($data);
+
+    // Handle media uploads
+    if ($thumbnail instanceof UploadedFile) {
+        $shop->addMedia($thumbnail)->toMediaCollection('thumbnail_shop');
     }
+
+    if ($feature instanceof UploadedFile) {
+        $shop->addMedia($feature)->toMediaCollection('feature_shop');
+    }
+
+    return $shop;
+}
+
 
     public function update(int $id, array $data): bool
     {
