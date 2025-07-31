@@ -39,24 +39,37 @@
               <img src="{{ $generalSettings['logo'] }}" alt="">
             </a>
             <ul class="menuzord-menu">
-              <li class="active"><a href="{{ url('/') }}">Home</a>
-              </li>
-              <li><a href="{{ route('shop') }}">Shop</a>
-              </li>
-              <li><a href="{{ route('course') }}">Course</a>
-              </li>
-              <li><a href="{{ route('study-abroad') }}">Study Abroad</a>
-              </li>
-              <li><a href="{{ route('blog') }}">Blog</a>
-              </li>
-              <li><a href="#">Get In Touch</a>
-                <ul class="dropdown">
-                  <li><a href="{{ route('about') }}">About</a>
-                  </li>
-                   <li><a href="{{ route('contact') }}">Contact</a>
-                  </li>
+                <li class="{{ request()->is('/') ? 'active' : '' }}">
+                    <a href="{{ url('/') }}">Home</a>
+                </li>
+
+                <li class="{{ request()->routeIs('shop') ? 'active' : '' }}">
+                    <a href="{{ route('shop') }}">Shop</a>
+                </li>
+
+                <li class="{{ request()->routeIs('course') ? 'active' : '' }}">
+                    <a href="{{ route('course') }}">Course</a>
+                </li>
+
+                <li class="{{ request()->routeIs('study-abroad') ? 'active' : '' }}">
+                    <a href="{{ route('study-abroad') }}">Study Abroad</a>
+                </li>
+
+                <li class="{{ request()->routeIs('blog') ? 'active' : '' }}">
+                    <a href="{{ route('blog') }}">Blog</a>
+                </li>
+
+                <li class="{{ request()->routeIs('about') || request()->routeIs('contact') ? 'active' : '' }}">
+                    <a href="#">Get In Touch</a>
+                    <ul class="dropdown">
+                    <li class="{{ request()->routeIs('about') ? 'active' : '' }}">
+                        <a href="{{ route('about') }}">About</a>
+                    </li>
+                    <li class="{{ request()->routeIs('contact') ? 'active' : '' }}">
+                        <a href="{{ route('contact') }}">Contact</a>
+                    </li>
                 </ul>
-              </li>
+            </li>
             </ul>
           </nav>
         </div>
