@@ -10,6 +10,7 @@ interface FrontHomeRepositoryInterface
     public function blog();
     public function blogPost($slug, $id);
     public function shop();
+    public function shopDetail($id);
     public function terms();
     public function privacy();
     public function courseDetail($slug, $id);

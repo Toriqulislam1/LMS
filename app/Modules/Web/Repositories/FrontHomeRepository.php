@@ -2,20 +2,25 @@
 namespace App\Modules\Web\Repositories;
 
 use App\Models\GeneralSetting;
+use App\Models\Shop;
 use App\Modules\provider\blog\Repositories\BlogRepositoryInterface;
 use App\Modules\Web\Repositories\FrontHomeRepositoryInterface;
 use App\Modules\Provider\course\Repositories\CourseRepositoryInterface;
+use App\Modules\provider\shop\Repositories\ShopRepositoryInterface;
+
 
 
 class FrontHomeRepository implements FrontHomeRepositoryInterface{
 
     protected $courseRepository;
     protected $blogRepository;
-    
-    public function __construct(CourseRepositoryInterface $courseRepository,BlogRepositoryInterface $blogRepository)
+    protected $shopRepository;
+
+    public function __construct(CourseRepositoryInterface $courseRepository,BlogRepositoryInterface $blogRepository,ShopRepositoryInterface $shopRepository)
     {
         $this->courseRepository = $courseRepository;
         $this->blogRepository = $blogRepository;
+        $this->shopRepository = $shopRepository;
     }
 
     public function home() {
@@ -62,7 +67,14 @@ class FrontHomeRepository implements FrontHomeRepositoryInterface{
     public function shop() {
         $pageTitle = 'Shop';
         $generalSettings = $this->generalSettings();
-        return view('web.pages.shop.index', compact('generalSettings', 'pageTitle'));
+        $shops = $this->shopRepository->frontendGetShop();
+        return view('web.pages.shop.index', compact('generalSettings', 'pageTitle', 'shops'));
+    }
+    public function shopDetail($id) {
+        $pageTitle = 'Shop Detail';
+        $generalSettings = $this->generalSettings();
+        $shop = $this->shopRepository->find($id);
+        return view('web.pages.shop.details', compact('generalSettings', 'pageTitle', 'shop'));
     }
     public function terms() {
         $pageTitle = 'Terms and Conditions';
@@ -89,7 +101,7 @@ class FrontHomeRepository implements FrontHomeRepositoryInterface{
         $generalSettings = $this->generalSettings();
         return view('web.pages.studyAbroad.index', compact('generalSettings', 'pageTitle'));
     }
-    
+
     // public function sitemap() {
     //     return view('web.sitemap');
     // }

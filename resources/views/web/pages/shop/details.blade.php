@@ -14,7 +14,7 @@
               <ol class="breadcrumb text-left text-black mt-10">
                 <li><a href="{{route('home')}}">Home</a></li>
                 <li><a href="{{route('shop')}}">Shop</a></li>
-                <li class="active text-gray-silver">English Book</li>
+                <li class="active text-gray-silver">{{ $shop->name }}</li>
               </ol>
             </div>
           </div>
@@ -30,30 +30,30 @@
               <div class="col-md-5">
                 <div class="product-image">
                   <div class="zoom-gallery">
-                    <a href="images/products/lg1.jpg" title="Title Here 1"><img src="images/products/lg1.jpg" alt=""></a>
+                    <a href="{{ $shop->getFirstMediaUrl('feature_shop') }}" title="Title Here 1"><img src="{{ $shop->getFirstMediaUrl('feature_shop') }}" alt=""></a>
                   </div>
                 </div>
               </div>
               <div class="col-md-7">
                 <div class="product-summary">
-                  <h2 class="product-title">Engish Book</h2>
+                  <h2 class="product-title">{{ $shop->name }}</h2>
                   <div class="product_review">
-                    <ul class="review_text list-inline">
+                    {{-- <ul class="review_text list-inline">
                       <li>
                         <div title="Rated 4.50 out of 5" class="star-rating"><span style="width: 90%;">4.50</span></div>
                       </li>
                       <li><a href="#"><span>2</span>Reviews</a></li>
                       <li><a href="#">Add reviews</a></li>
-                    </ul>
+                    </ul> --}}
                   </div>
-                  <div class="price"> <del><span class="amount">$165.00</span></del> <ins><span class="amount">$160.00</span></ins> </div>
+                  <div class="price"> <del><span class="amount">{{ $shop->price }}</span></del> <ins><span class="amount">{{ ($shop->price - $shop->discount_price) }}</span></ins> </div>
                   <div class="short-description">
-                    <p>Donec volutpat purus tempor sem molestie, sed blandit lacus posuere. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut posuere mollis nulla ut consectetur.</p>
+                    <p>{!! $shop->description !!}</p>
                   </div>
-                  <div class="tags"><strong>SKU:</strong> EA34</div>
+                  {{-- <div class="tags"><strong>SKU:</strong> EA34</div>
                   <div class="category"><strong>Category:</strong> <a href="#">Book</a>, <a href="#">Note Book</a></div>
-                  <div class="tags"><strong>Tags:</strong> <a href="#">Bag</a>, <a href="#">Ladies Bag</a></div>
-                  <div class="cart-form-wrapper mt-30">
+                  <div class="tags"><strong>Tags:</strong> <a href="#">Bag</a>, <a href="#">Ladies Bag</a></div> --}}
+                  {{-- <div class="cart-form-wrapper mt-30">
                     <form enctype="multipart/form-data" method="post" class="cart">
                       <input type="hidden" value="productID" name="add-to-cart">
                       <table class="table variations no-border">
@@ -72,10 +72,10 @@
                       </table>
                       <button class="single_add_to_cart_button btn btn-theme-colored" type="submit">Add to cart</button>
                     </form>
-                  </div>
+                  </div> --}}
                 </div>
               </div>
-              <div class="col-md-12">
+              {{-- <div class="col-md-12">
                 <div class="horizontal-tab product-tab">
                   <ul class="nav nav-tabs">
                     <li class="active"><a href="#tab1" data-toggle="tab">Description</a></li>
@@ -150,16 +150,16 @@
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> --}}
             </div>
-            <div class="col-md-12">
+            {{-- <div class="col-md-12">
               <h3 class="line-bottom">Related Products</h3>
               <div class="row multi-row-clearfix">
                 <div class="products related">
                   <div class="col-sm-6 col-md-3 col-lg-3 mb-sm-30">
                     <div class="product">
                       <span class="tag-sale">Sale!</span>
-                      <div class="product-thumb"> 
+                      <div class="product-thumb">
                         <img alt="" src="images/products/6.png" class="img-responsive img-fullwidth">
                         <div class="overlay">
                           <div class="btn-add-to-cart-wrapper">
@@ -180,7 +180,7 @@
                   <div class="col-sm-6 col-md-3 col-lg-3 mb-sm-30">
                     <div class="product">
                       <span class="tag-sale">Sale!</span>
-                      <div class="product-thumb"> 
+                      <div class="product-thumb">
                         <img alt="" src="images/products/7.png" class="img-responsive img-fullwidth">
                         <div class="overlay">
                           <div class="btn-add-to-cart-wrapper">
@@ -200,7 +200,7 @@
                   </div>
                   <div class="col-sm-6 col-md-3 col-lg-3 mb-sm-30">
                     <div class="product">
-                      <div class="product-thumb"> 
+                      <div class="product-thumb">
                         <img alt="" src="images/products/2.png" class="img-responsive img-fullwidth">
                         <div class="overlay">
                           <div class="btn-add-to-cart-wrapper">
@@ -220,7 +220,7 @@
                   </div>
                   <div class="col-sm-6 col-md3 col-lg-3">
                     <div class="product">
-                      <div class="product-thumb"> 
+                      <div class="product-thumb">
                         <img alt="" src="images/products/9.png" class="img-responsive img-fullwidth">
                         <div class="overlay">
                           <div class="btn-add-to-cart-wrapper">
@@ -240,7 +240,7 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </div> --}}
           </div>
         </div>
       </div>

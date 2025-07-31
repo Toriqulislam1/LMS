@@ -46,6 +46,10 @@ class HomeController extends Controller
     {
         return $this->frontHomeRepo->shop();
     }
+    public function shopDetail($id)
+    {
+        return $this->frontHomeRepo->shopDetail((int)$id);
+    }
     public function terms()
     {
         return $this->frontHomeRepo->terms();

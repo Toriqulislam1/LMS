@@ -15,6 +15,10 @@ class ShopRepository implements ShopRepositoryInterface
     {
         return Shop::all();
     }
+    public function frontendGetShop()
+    {
+        return Shop::all();
+    }
 
     public function find(int $id): ?Shop
     {

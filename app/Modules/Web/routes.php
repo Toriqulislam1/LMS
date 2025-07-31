@@ -14,6 +14,7 @@ Route::group([], function () {
     Route::get('/blog', [HomeController::class, 'blog'])->name('blog');
     Route::get('/blog/{slug}/{id}', [HomeController::class, 'blogPost'])->name('blog-detail');
     Route::get('/shop', [HomeController::class, 'shop'])->name('shop');
+    Route::get('/shop/{id}', [HomeController::class, 'shopDetail'])->name('shop-details');
     Route::get('/terms', [HomeController::class, 'terms'])->name('terms');
     Route::get('/privacy', [HomeController::class, 'privacy'])->name('privacy');
     // Route::get('/sitemap', [HomeController::class, 'sitemap']);
