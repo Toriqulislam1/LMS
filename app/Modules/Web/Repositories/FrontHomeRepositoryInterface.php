@@ -17,5 +17,6 @@ interface FrontHomeRepositoryInterface
     public function studyAbroad();
     // public function sitemap();
     // public function error404();
+
 }
 

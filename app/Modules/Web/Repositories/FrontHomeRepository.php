@@ -5,7 +5,8 @@ use App\Models\GeneralSetting;
 use App\Models\Shop;
 use App\Modules\provider\blog\Repositories\BlogRepositoryInterface;
 use App\Modules\Web\Repositories\FrontHomeRepositoryInterface;
-use App\Modules\Provider\course\Repositories\CourseRepositoryInterface;
+use App\Modules\provider\course\Repositories\CourseRepositoryInterface;
+
 use App\Modules\provider\shop\Repositories\ShopRepositoryInterface;
 
 
@@ -27,6 +28,7 @@ class FrontHomeRepository implements FrontHomeRepositoryInterface{
         $pageTitle = 'Home';
         $generalSettings = $this->generalSettings();
         $courses = $this->courseRepository->frontendGetCourses();
+
         return view('web.home', compact('generalSettings', 'pageTitle', 'courses'));
     }
     public function about() {

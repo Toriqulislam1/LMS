@@ -19,4 +19,5 @@ Route::group([], function () {
     Route::get('/privacy', [HomeController::class, 'privacy'])->name('privacy');
     // Route::get('/sitemap', [HomeController::class, 'sitemap']);
     // Route::get('/error404', [HomeController::class, 'error404']);
+
 });

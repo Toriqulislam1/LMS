@@ -273,7 +273,7 @@
                     </li>
                     <!-- End Menu Item web setting -->
                     <!-- Menu Item with submenu -->
-                    <li x-data="{ open: false }" class="relative">
+                    {{--  <li x-data="{ open: false }" class="relative">
                         <a href="#" @click.prevent="open = !open"
                             class="menu-item group flex items-center justify-between text-gray-700 dark:text-gray-900"
                             :class="open ? 'menu-item-active' : 'menu-item-inactive'">
@@ -320,7 +320,7 @@
                                 </li>
                             </ul>
                         </div>
-                    </li>
+                    </li>  --}}
                     <!-- End Menu Item user and role -->
 
 

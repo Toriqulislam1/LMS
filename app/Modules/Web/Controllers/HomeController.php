@@ -5,6 +5,9 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Modules\Web\Repositories\FrontHomeRepositoryInterface;
 use App\Modules\provider\course\Repositories\CourseRepositoryInterface;
+use App\Modules\provider\blog\Repositories\BlogRepositoryInterface;
+use App\Modules\provider\shop\Repositories\ShopRepositoryInterface;
+
 
 class HomeController extends Controller
 {
@@ -16,6 +19,7 @@ class HomeController extends Controller
 
     public function home()
     {
+
         return $this->frontHomeRepo->home();
     }
     public function about()
