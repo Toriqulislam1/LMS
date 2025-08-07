@@ -12,6 +12,20 @@ use App\Models\Admin;
 
 class AdminRepository implements AdminRepositoryInterface
 {
+
+    public function __construct()
+    {
+        // You can inject any dependencies here if needed
+    }
+    public function updateAdminProfile($id, array $data)
+    {
+        $admin = Admin::findOrFail($id);
+
+        $admin->update($data);
+
+        return $admin;
+    }
+
     // public function all()
     // {
     //     return Admin::all();

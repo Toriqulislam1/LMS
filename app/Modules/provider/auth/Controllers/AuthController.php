@@ -11,7 +11,7 @@ class AuthController extends Controller
 
     public function __construct(AdminRepositoryInterface $adminRepo)
     {
-       
+
         $this->adminRepo = $adminRepo;
     }
 
@@ -39,7 +39,22 @@ class AuthController extends Controller
         return view('provider.home', compact('generalSettings'));
 
     }
+    public function profileEdit()
+    {
+        $admin = Auth::guard('admin')->user();
+        return view('provider.profile_edit', compact('admin'));
+    }
+    public function profileUpdate(Request $request, $id)
+    {
+        $admin = Auth::guard('admin')->user();
+        $data = $request->all();
 
+
+
+        $this->adminRepo->updateAdminProfile($id, $data);
+
+        return redirect()->route('admin-profile-edit')->with('success', 'Profile updated successfully.');
+    }
 
     public function logout(Request $request)
     {
