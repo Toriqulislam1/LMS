@@ -15,7 +15,7 @@
             </ul>
           </div>
         </div>
-        <div class="col-sm-6 col-md-3">
+        {{-- <div class="col-sm-6 col-md-3">
           <div class="widget dark">
             <h5 class="widget-title line-bottom">Latest News</h5>
             <div class="latest-posts">
@@ -28,7 +28,7 @@
               </article>
             </div>
           </div>
-        </div>
+        </div> --}}
         <div class="col-sm-6 col-md-3">
           <div class="widget dark">
             <h5 class="widget-title line-bottom">Useful Links</h5>
@@ -42,9 +42,9 @@
           <div class="widget dark">
             <h5 class="widget-title line-bottom">Quick Contact</h5>
             <ul class="list-border">
-              <li><a href="#">+(012) 345 6789</a></li>
-              <li><a href="#">hello@yourdomain.com</a></li>
-              <li><a href="#" class="lineheight-20">121 King Street, Melbourne Victoria 3000, Australia</a></li>
+              <li><a href="#">+8801780746318</a></li>
+              <li><a href="#">icer.bangladesh1@gmail.com</a></li>
+              <li><a href="#" class="lineheight-20">4/2 Salimullah Road, Mohammadpur, Dhaka, Bangladesh</a></li>
             </ul>
             {{-- <p class="font-16 text-white mb-5 mt-15">Subscribe to our newsletter</p>
             <form id="footer-mailchimp-subscription-form" class="newsletter-form mt-10">
