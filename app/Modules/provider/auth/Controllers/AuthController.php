@@ -48,9 +48,6 @@ class AuthController extends Controller
     {
         $admin = Auth::guard('admin')->user();
         $data = $request->all();
-
-
-
         $this->adminRepo->updateAdminProfile($id, $data);
 
         return redirect()->route('admin-profile-edit')->with('success', 'Profile updated successfully.');

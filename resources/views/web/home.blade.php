@@ -36,7 +36,7 @@
                 data-splitin="none"
                 data-splitout="none"
                 data-responsive_offset="on"
-                style="z-index: 7; white-space: nowrap; font-weight:700;">Education
+                style="z-index: 7; white-space: nowrap; font-weight:500;">Learn Today
               </div>
 
               <!-- LAYER NR. 2 -->
@@ -61,7 +61,7 @@
                 data-splitin="none"
                 data-splitout="none"
                 data-responsive_offset="on"
-                style="z-index: 7; white-space: nowrap; font-weight:600;">Education For EveryOne
+                style="z-index: 7; white-space: nowrap; font-weight:600;">Transforming Knowledge into Action
               </div>
 
               <!-- LAYER NR. 3 -->
@@ -86,11 +86,11 @@
                 data-splitin="none"
                 data-splitout="none"
                 data-responsive_offset="on"
-                style="z-index: 5; white-space: nowrap; letter-spacing:0px; font-weight:400;">We provides always our best services for our clients and  always<br> try to achieve our client's trust and satisfaction.
+                style="z-index: 5; white-space: nowrap; letter-spacing:0px; font-weight:400;">We bridge the gap between learning and real-world impact — turning insights into meaningful action for lasting change.
               </div>
 
               <!-- LAYER NR. 4 -->
-              <div class="tp-caption tp-resizeme"
+              {{-- <div class="tp-caption tp-resizeme"
                 id="rs-1-layer-4"
 
                 data-x="['left']"
@@ -110,7 +110,7 @@
                 data-splitout="none"
                 data-responsive_offset="on"
                 style="z-index: 5; white-space: nowrap; letter-spacing:1px;"><a class="btn btn-colored btn-lg btn-flat btn-theme-colored border-left-theme-color-2-6px pl-20 pr-20" href="#">View Details</a>
-              </div>
+              </div> --}}
             </li>
 
             <!-- SLIDE 2 -->
@@ -141,7 +141,7 @@
                 data-splitin="none"
                 data-splitout="none"
                 data-responsive_offset="on"
-                style="z-index: 7; white-space: nowrap; font-weight:400; border-radius: 30px;">Feed Your Knowledge
+                style="z-index: 7; white-space: nowrap; font-weight:400; border-radius: 30px;">Empowering Communities
               </div>
 
               <!-- LAYER NR. 2 -->
@@ -166,7 +166,7 @@
                 data-splitin="none"
                 data-splitout="none"
                 data-responsive_offset="on"
-                style="z-index: 7; white-space: nowrap; font-weight:700; border-radius: 30px;">World's Best University
+                style="z-index: 7; white-space: nowrap; font-weight:700; border-radius: 30px;">Enabling Change
               </div>
 
               <!-- LAYER NR. 3 -->
@@ -191,11 +191,11 @@
                 data-splitin="none"
                 data-splitout="none"
                 data-responsive_offset="on"
-                style="z-index: 5; white-space: nowrap; letter-spacing:0px; font-weight:400;">We provides always our best services for our clients and  always<br> try to achieve our client's trust and satisfaction.
+                style="z-index: 5; white-space: nowrap; letter-spacing:0px; font-weight:400;">We work hand in hand with local communities to build sustainable solutions, foster inclusion, and drive collective growth — because real change begins at the grassroots.
               </div>
 
               <!-- LAYER NR. 4 -->
-              <div class="tp-caption tp-resizeme"
+              {{-- <div class="tp-caption tp-resizeme"
                 id="rs-2-layer-4"
 
                 data-x="['center']"
@@ -215,7 +215,7 @@
                 data-splitout="none"
                 data-responsive_offset="on"
                 style="z-index: 5; white-space: nowrap; letter-spacing:1px;"><a class="btn btn-default btn-circled btn-transparent pl-20 pr-20" href="#">Apply Now</a>
-              </div>
+              </div> --}}
             </li>
 
             <!-- SLIDE 3 -->
@@ -246,7 +246,7 @@
                 data-splitin="none"
                 data-splitout="none"
                 data-responsive_offset="on"
-                style="z-index: 7; white-space: nowrap; font-weight:600;">Best Education
+                style="z-index: 7; white-space: nowrap; font-weight:600;">Empowering Minds
               </div>
 
               <!-- LAYER NR. 2 -->
@@ -271,7 +271,7 @@
                 data-splitin="none"
                 data-splitout="none"
                 data-responsive_offset="on"
-                style="z-index: 7; white-space: nowrap; font-weight:600;">For Your Better Future
+                style="z-index: 7; white-space: nowrap; font-weight:600;">Today to Build a Better Tomorrow
               </div>
 
               <!-- LAYER NR. 3 -->
@@ -296,11 +296,11 @@
                 data-splitin="none"
                 data-splitout="none"
                 data-responsive_offset="on"
-                style="z-index: 5; white-space: nowrap; letter-spacing:0px; font-weight:400;">We provides always our best services for our clients and  always<br> try to achieve our client's trust and satisfaction.
+                style="z-index: 5; white-space: nowrap; letter-spacing:0px; font-weight:400;">We believe that meaningful change starts with informed, inspired individuals. 
               </div>
 
               <!-- LAYER NR. 4 -->
-              <div class="tp-caption tp-resizeme"
+              {{-- <div class="tp-caption tp-resizeme"
                 id="rs-3-layer-4"
 
                 data-x="['right']"
@@ -320,7 +320,7 @@
                 data-splitout="none"
                 data-responsive_offset="on"
                 style="z-index: 5; white-space: nowrap; letter-spacing:1px;"><a class="btn btn-colored btn-lg btn-flat btn-theme-colored btn-theme-colored border-right-theme-color-2-6px pl-20 pr-20" href="#">Apply Now</a>
-              </div>
+              </div> --}}
             </li>
 
           </ul>
@@ -384,7 +384,7 @@
                 h_offset:0,
                 v_offset:30,
                 space:5,
-                tmp:'<span class="tp-bullet-img-wrap">  <span class="tp-bullet-image"></span></span><span class="tp-bullet-title">Toriqul</span>'
+                tmp:'<span class="tp-bullet-img-wrap">  <span class="tp-bullet-image"></span></span><span class="tp-bullet-title">Icer</span>'
               }
             },
             responsiveLevels: [1240, 1024, 778],
@@ -427,7 +427,7 @@
     </section>
 
     <!-- Section: home-boxes -->
-    <section class="bg-silver-light">
+    {{-- <section class="bg-silver-light">
       <div class="container pt-0 pb-0">
         <div class="section-content">
           <div class="row equal-height-inner home-boxes" data-margin-top="-100px">
@@ -466,7 +466,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> --}}
 
 
     <!-- Section: About -->
@@ -475,8 +475,8 @@
         <div class="section-content">
           <div class="row">
             <div class="col-md-8 col-sm-12 wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.3s">
-              <h2 class="text-uppercase mt-0">Welcome To <span class="text-theme-color-2">  LearnPress </span></h2>
-              <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisi cing elit. Quos dolo rem consequ untur, natus laudantium commodi earum aliquid in ullam.</p>
+              <h2 class="text-uppercase mt-0">Welcome to <span class="text-theme-color-2">ICER – Institute of Community Empowerment and Research  </span></h2>
+              <p class="lead">ICER (Institute of Community Empowerment and Research) is a Bangladesh-based academic and professional development platform dedicated to building a knowledge-driven, socially conscious, and empowered generation. Through research-based education, community-focused programs, and certified online training, ICER is shaping the future of individuals, institutions, and the society at large.</p>
               <div class="row mt-40">
                 <div class="col-md-6 wow fadeInUp" data-wow-duration="1s">
                   <div class="mb-sm-30">
@@ -596,8 +596,8 @@
                   <i class="fa fa-desktop text-theme-color-2 font-36"></i>
                 </a>
                 <div class="ml-120 ml-sm-0">
-                  <h4 class="icon-box-title text-white mt-5 mb-10 letter-space-1">Best Lab</h4>
-                  <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam interdum diam tortor, egestas varius erat aliquam. </p>
+                  <h4 class="icon-box-title text-white mt-5 mb-10 letter-space-1">Tailored Learning for Real-World Impact</h4>
+                  <p class="text-white">Our courses and workshops are designed to meet the specific needs of students, researchers, NGO professionals, and community leaders — ensuring practical skills you can apply immediately.</p>
                 </div>
               </div>
               <div class="icon-box clearfix m-0 p-0 pb-10">
@@ -605,8 +605,8 @@
                   <i class="fa fa-user text-theme-color-2 font-36"></i>
                 </a>
                 <div class="ml-120 ml-sm-0">
-                  <h4 class="icon-box-title text-white mt-5 mb-10 letter-space-1">Best Teachers</h4>
-                  <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam interdum diam tortor, egestas varius erat aliquam. </p>
+                  <h4 class="icon-box-title text-white mt-5 mb-10 letter-space-1">Affordable & Flexible Education</h4>
+                  <p class="text-white">We provide high-quality, accessible learning options with flexible schedules and pricing, so you can advance your knowledge without compromising your commitments or budget.</p>
                 </div>
               </div>
               <div class="icon-box clearfix m-0 p-0 pb-10">
@@ -614,8 +614,8 @@
                   <i class="fa fa-money text-theme-color-2 font-36"></i>
                 </a>
                 <div class="ml-120 ml-sm-0">
-                  <h4 class="icon-box-title text-white mt-5 mb-10 letter-space-1">Low Cost Services</h4>
-                  <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam interdum diam tortor, egestas varius erat aliquam. </p>
+                  <h4 class="icon-box-title text-white mt-5 mb-10 letter-space-1">Trusted Expertise & Support</h4>
+                  <p class="text-white">With experienced trainers, research-based content, and ongoing support, ICER is your reliable partner in professional growth and community empowerment.</p>
                 </div>
               </div>
             </div>
@@ -633,7 +633,7 @@
           <div class="row">
             <div class="col-md-8 col-md-offset-2">
               <h2 class="mt-0 line-height-1 text-center text-uppercase mb-10 text-black-333">Our <span class="text-theme-color-2"> Courses</span></h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem autem<br> voluptatem obcaecati!</p>
+              <p>At the Institute of Community Empowerment and Research (ICER), we offer professionally designed certificate courses to empower students, researchers, and professionals with essential skills and practical knowledge. Our courses are developed by experienced educators and experts in their respective fields.</p>
             </div>
           </div>
         </div>
@@ -670,7 +670,7 @@
 
 
     <!-- Divider: Funfact -->
-    <section class="divider parallax layer-overlay" data-bg-img="{{asset('frontend')}}/images/bg/bg6.jpg" data-parallax-ratio="0.7">
+    {{-- <section class="divider parallax layer-overlay" data-bg-img="{{asset('frontend')}}/images/bg/bg6.jpg" data-parallax-ratio="0.7">
       <div class="container pt-70 pb-60">
         <div class="row">
           <div class="col-xs-12 col-sm-6 col-md-3 mb-md-50">
@@ -703,7 +703,7 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> --}}
 
     <!-- Section: Teachers -->
     <section id="teachers">
@@ -712,7 +712,7 @@
           <div class="row">
             <div class="col-md-8 col-md-offset-2">
               <h2 class="mt-0 line-height-1 text-center text-uppercase mb-10 text-black-333">Our <span class="text-theme-color-2"> Teachers</span></h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem autem<br> voluptatem obcaecati!</p>
+              <p>At ICER, we bring together experts who not only teach—but inspire real transformation. Each of our courses is led by highly qualified professionals with years of experience in their respective fields.</p>
             </div>
           </div>
         </div>
@@ -798,7 +798,7 @@
     </section>
 
     <!-- Section: events -->
-    <section id="events" class="divider parallax layer-overlay overlay-dark-8" data-stellar-background-ratio="0.5" data-bg-img="{{asset('frontend')}}/images/bg/bg1.jpg">
+    {{-- <section id="events" class="divider parallax layer-overlay overlay-dark-8" data-stellar-background-ratio="0.5" data-bg-img="{{asset('frontend')}}/images/bg/bg1.jpg">
       <div class="container pt-70 pb-40">
         <div class="section-title mb-30">
           <div class="row">
@@ -893,10 +893,10 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> --}}
 
     <!-- Gallery Grid 3 -->
-    <section id="gallery">
+    {{-- <section id="gallery">
       <div class="container pt-70 pb-70">
         <div class="section-title text-center">
           <div class="row">
@@ -1154,10 +1154,10 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> --}}
 
     <!-- Section: Client Say -->
-    <section class="divider parallax layer-overlay overlay-dark-4" data-background-ratio="0.5" data-bg-img="{{asset('frontend')}}/images/bg/bg2.jpg">
+    {{-- <section class="divider parallax layer-overlay overlay-dark-4" data-background-ratio="0.5" data-bg-img="{{asset('frontend')}}/images/bg/bg2.jpg">
       <div class="container pt-60 pb-60">
         <div class="row">
           <div class="col-md-8 col-md-offset-2">
@@ -1197,10 +1197,10 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> --}}
 
     <!-- Section: Blog -->
-    <section id="blog">
+    {{-- <section id="blog">
       <div class="container pt-70">
         <div class="section-title text-center">
           <div class="row">
@@ -1337,10 +1337,10 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> --}}
 
     <!-- Divider: Clients -->
-    <section class="clients bg-theme-colored">
+    {{-- <section class="clients bg-theme-colored">
       <div class="container pt-10 pb-10 pb-sm-0 pt-sm-0">
         <div class="row">
           <div class="col-md-12">
@@ -1360,6 +1360,6 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> --}}
 
 @endsection
