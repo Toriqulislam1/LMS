@@ -75,6 +75,12 @@
                                         Course
                                     </a>
                                 </li>
+                                <li>
+                                    <a href="{{ route('courses-video.index') }}"
+                                        class="block px-2 py-1 text-sm text-gray-600 dark:text-gray-700 hover:text-primary">
+                                        Course Video
+                                    </a>
+                                </li>
                             </ul>
                         </div>
                     </li>
@@ -325,6 +331,12 @@
 
 
                 </ul>
+            </div>
+            <!-- End Menu Group -->
+            <div class="development">
+                <p class="text-xs text-gray-500 dark:text-gray-400">
+                    Developed by <a href="http://shanjum.online/" target="_blank" class="text-primary">Shanjum Technologies</a>
+                </p>
             </div>
         </nav>
         <!-- End Sidebar Menu -->

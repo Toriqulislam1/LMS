@@ -20,4 +20,13 @@ Route::group([], function () {
     // Route::get('/sitemap', [HomeController::class, 'sitemap']);
     // Route::get('/error404', [HomeController::class, 'error404']);
 
+
+});
+
+Route::get('/clear-cache', function () {
+    \Artisan::call('cache:clear');
+    \Artisan::call('config:clear');
+    \Artisan::call('route:clear');
+    \Artisan::call('view:clear');
+    return 'Cache cleared successfully';
 });

@@ -6,5 +6,6 @@ use App\Modules\provider\course\Controllers\CourseController;
 Route::group([],function () {
 
     Route::resource('courses', CourseController::class);
+    Route::resource('courses-video', [CourseVideoController::class]);;
 
 });

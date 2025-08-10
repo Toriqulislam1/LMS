@@ -70,6 +70,9 @@
         </main>
         <!-- ===== Main Content End ===== -->
       </div>
+        <!-- ===== Footer Start ===== -->
+        @include('provider.partials.footer')
+        <!-- ===== Footer End ===== -->
       <!-- ===== Content Area End ===== -->
     </div>
     <!-- ===== Page Wrapper End ===== -->
