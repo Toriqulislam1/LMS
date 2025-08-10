@@ -5,6 +5,7 @@ use App\Modules\provider\auth\Repositories\AdminRepositoryInterface;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
+
 class AuthController extends Controller
 {
        protected $adminRepo;
@@ -46,11 +47,10 @@ class AuthController extends Controller
     }
     public function profileUpdate(Request $request, $id)
     {
-        $admin = Auth::guard('admin')->user();
         $data = $request->all();
         $this->adminRepo->updateAdminProfile($id, $data);
 
-        return redirect()->route('admin-profile-edit')->with('success', 'Profile updated successfully.');
+        return redirect()->route('admin-dashboard')->with('success', 'Profile updated successfully.');
     }
 
     public function logout(Request $request)

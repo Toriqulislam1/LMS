@@ -614,7 +614,7 @@
           @click.prevent="dropdownOpen = ! dropdownOpen"
         >
           <span class="mr-3 h-11 w-11 overflow-hidden rounded-full">
-            <img src="{{ asset('images/user/owner.jpg') }}" alt="User" />
+            <img src="{{  Auth::guard('admin')->user()->getFirstMediaUrl('profile_image') }}" alt="User" />
           </span>
 
           <span class="text-theme-sm mr-1 block font-medium"> {{ Auth::guard('admin')->user()->name }} </span>
@@ -661,7 +661,7 @@
           >
             <li>
               <a
-                href="profile.html"
+                href="{{route('admin-profile-edit')}}"
                 class="group text-theme-sm flex items-center gap-3 rounded-lg px-3 py-2 font-medium text-gray-700 hover:bg-gray-100 hover:text-gray-700 dark:text-gray-400 dark:hover:bg-white/5 dark:hover:text-gray-300"
               >
                 <svg

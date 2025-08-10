@@ -6,6 +6,7 @@ use App\Models\GeneralSetting;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Request;
+use Illuminate\Http\UploadedFile;
 
 use App\Models\Admin;
 
@@ -20,8 +21,28 @@ class AdminRepository implements AdminRepositoryInterface
     public function updateAdminProfile($id, array $data)
     {
         $admin = Admin::findOrFail($id);
-        $admin->update($data);
-        return $admin;
+
+            // Password encryption if provided
+            if (isset($data['password'])) {
+                $data['password'] = bcrypt($data['password']);
+            }
+
+            $profile = $data['profile_image'] ?? null;
+            unset($data['profile_image']);
+
+            // Update other fields
+            $admin->update($data);
+
+            // Optional media upload if file exists and is valid
+            if ($profile instanceof UploadedFile) {
+                // Delete old image before adding new one
+                $admin->clearMediaCollection('profile_image');
+
+                // Add new image
+                $admin->addMedia($profile)->toMediaCollection('profile_image');
+            }
+
+            return $admin;
     }
 
     // public function all()

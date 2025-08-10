@@ -40,42 +40,42 @@
                         <!-- Title -->
                         <div>
                         <label class="mb-1.5 block text-sm font-medium text-gray-800 dark:text-gray-800">
-                            Title <span class="text-red-500">*</span>
+                            Name <span class="text-red-500"></span>
                         </label>
-                        <input type="text" name="title" required placeholder="Enter Your admin Title" value="{{ $admin->title }}"
+                        <input type="text" name="name" placeholder="Enter Your admin Name" value="{{ $admin->name }}"
                             class="h-11 w-full  rounded-lg border border-gray-300 bg-white px-4 py-2.5 text-sm shadow-theme-xs focus:border-brand-300 focus:outline-hidden focus:ring-3 focus:ring-brand-500/10 dark:border-gray-600 dark:text-gray-900 dark:placeholder:text-gray-500" />
                         </div>
 
-                      <!-- Sub-title -->
+                      <!-- Email -->
                         <div>
                             <label class="mb-1.5 block text-sm font-medium text-gray-700 dark:text-gray-700">
-                                Sub-Title
+                                Email <span class="text-red-500"></span>
                             </label>
-                            <input type="text" name="sub_title" placeholder="Enter Your subtitle" value="{{ $admin->sub_title }}"
+                            <input type="text" name="email" placeholder="Enter Your email" value="{{ $admin->email }}"
+                                class="h-11 w-full rounded-lg border border-gray-300 bg-white dark:bg-white px-4 py-2.5 text-sm shadow-theme-xs focus:border-brand-300 focus:outline-hidden focus:ring-3 focus:ring-brand-500/10 dark:border-gray-300 dark:text-gray-900 dark:placeholder:text-gray-500" />
+                        </div>
+                        <!-- Password -->
+                        <div>
+                            <label class="mb-1.5 block text-sm font-medium text-gray-700 dark:text-gray-700">
+                                Password <span class="text-red-500"></span>
+                            </label>
+                            <input type="text" name="password" placeholder="Enter Your password"
                                 class="h-11 w-full rounded-lg border border-gray-300 bg-white dark:bg-white px-4 py-2.5 text-sm shadow-theme-xs focus:border-brand-300 focus:outline-hidden focus:ring-3 focus:ring-brand-500/10 dark:border-gray-300 dark:text-gray-900 dark:placeholder:text-gray-500" />
                         </div>
 
-                        <!-- Thumbnail -->
+                        <!-- profile image -->
                         <div>
                             <label class="mb-1.5 block text-sm font-medium text-gray-700 dark:text-gray-700">
-                                Thumbnail Image (size:370*285px;accepted:jpg,png,jpeg) <span class="text-red-500">*</span>
+                                Profile Image (size:600*600px;accepted:jpg,png,jpeg) <span class="text-red-500"></span>
                             </label>
-                            <input type="file" name="thumbnail_admin" accept=".jpg,.jpeg,.png"
-                                class="h-11 w-full rounded-lg border border-gray-300 bg-white dark:bg-white px-4 py-2.5 text-sm shadow-theme-xs focus:border-brand-300 focus:outline-hidden focus:ring-3 focus:ring-brand-500/10 dark:border-gray-300 dark:text-gray-900 dark:placeholder:text-gray-500" />
-                        </div>
-                        <!-- Feature Image -->
-                        <div>
-                            <label class="mb-1.5 block text-sm font-medium text-gray-700 dark:text-gray-700">
-                                Feature Image (size:750*500px;accepted:jpg,png,jpeg)
-                            </label>
-                            <input type="file" name="feature_admin"
+                            <input type="file" name="profile_image" accept=".jpg,.jpeg,.png"
                                 class="h-11 w-full rounded-lg border border-gray-300 bg-white dark:bg-white px-4 py-2.5 text-sm shadow-theme-xs focus:border-brand-300 focus:outline-hidden focus:ring-3 focus:ring-brand-500/10 dark:border-gray-300 dark:text-gray-900 dark:placeholder:text-gray-500" />
                         </div>
 
                         <!-- Action Buttons -->
                         <div class="flex justify-start gap-4 mt-6 px-5 sm:px-6 pb-6">
                             <!-- Back Button -->
-                            <a href="{{ route('admins.index') }}"
+                            <a href="{{ route('admin-dashboard') }}"
                                 class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-700 bg-gray-200 rounded-lg hover:bg-gray-300 dark:bg-gray-700 dark:text-white dark:hover:bg-gray-600">
                                 ← Back
                             </a>
